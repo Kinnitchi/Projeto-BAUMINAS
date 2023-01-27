@@ -28,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>GQ - RH - Férias</processId>
-      <version>7</version>
+      <version>10</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>74170</formId>
+    <formId>0</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -318,6 +318,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;GQ-DIRETORIA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -1238,7 +1240,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>15</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_gerenteDeAcordo&quot;)==&quot;Sim&quot;</condition>
@@ -1250,7 +1252,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>15</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_gerenteDeAcordo&quot;)==&quot;Ajustar&quot;</condition>
@@ -1264,7 +1266,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>3</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>15</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_gerenteDeAcordo&quot;)==&quot;Nao&quot;</condition>
@@ -1276,7 +1278,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_rhDeAcordo&quot;)==&quot;Sim&quot;</condition>
@@ -1288,7 +1290,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_rhDeAcordo&quot;)==&quot;AjustarSolicitante&quot; || hAPI.getCardValue(&quot;rad_rhDeAcordo&quot;)==&quot;Nao&quot;</condition>
@@ -1302,7 +1304,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>3</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_rhDeAcordo&quot;)==&quot;AjustarGerente&quot;</condition>
@@ -1316,7 +1318,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_dpDeAcordo&quot;)==&quot;Sim&quot;</condition>
@@ -1328,7 +1330,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_dpDeAcordo&quot;)==&quot;AjustarSolicitante&quot; || hAPI.getCardValue(&quot;rad_dpDeAcordo&quot;)==&quot;Nao&quot;</condition>
@@ -1342,7 +1344,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>3</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_dpDeAcordo&quot;)==&quot;AjustarRH&quot;</condition>
@@ -1356,7 +1358,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>31</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_tiDeAcordo&quot;)==&quot;Sim&quot;</condition>
@@ -1368,7 +1370,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>31</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_tiDeAcordo&quot;)==&quot;AjustarSolicitante&quot; || hAPI.getCardValue(&quot;rad_tiDeAcordo&quot;)==&quot;Nao&quot;</condition>
@@ -1382,7 +1384,7 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>3</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>31</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;rad_tiDeAcordo&quot;)==&quot;AjustarDP&quot;</condition>
@@ -1396,10 +1398,10 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>56</sequence>
       </conditionProcessStatePK>
-      <condition>true</condition>
+      <condition>hAPI.getCardValue((&apos;rad_diretoriaDeAcordo&apos;) == &quot;Sim&quot;</condition>
       <destinationSequenceId>59</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
@@ -1408,10 +1410,10 @@
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>56</sequence>
       </conditionProcessStatePK>
-      <condition>false&#xd;
+      <condition>true&#xd;
 </condition>
       <destinationSequenceId>58</destinationSequenceId>
       <conditionType>0</conditionType>
@@ -2136,7 +2138,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>GQ-RH-Ferias</processId>
-        <version>7</version>
+        <version>10</version>
         <linkSequence>12</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

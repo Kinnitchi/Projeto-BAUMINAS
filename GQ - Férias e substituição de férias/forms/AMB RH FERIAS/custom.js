@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     datasHoras();
 
@@ -7,17 +7,25 @@ $(document).ready(function() {
         $("#guiaGerente").addClass("active");
         $("#div_solicitante").removeClass("in active");
         $("#div_gerente").addClass("in active");
-    }else if ($("#atividade").val() == "3") {
+
+    } else if ($("#atividade").val() == "54") {
+
+        $("#guiaGerente").removeClass("active");
+        $("#guiaDiretoria").addClass("active");
+        $("#div_gerente").removeClass("in active");
+        $("#div_diretoria").addClass("in active");
+
+    } else if ($("#atividade").val() == "3") {
         $("#guiaSolicitante").removeClass("active");
         $("#guiaRH").addClass("active");
         $("#div_solicitante").removeClass("in active");
         $("#div_RH").addClass("in active");
-    }else if ($("#atividade").val() == "4") {
+    } else if ($("#atividade").val() == "4") {
         $("#guiaSolicitante").removeClass("active");
         $("#guiaDP").addClass("active");
         $("#div_solicitante").removeClass("in active");
         $("#div_DP").addClass("in active");
-    }else if ($("#atividade").val() == "5") {
+    } else if ($("#atividade").val() == "5") {
         $("#guiaSolicitante").removeClass("active");
         $("#guiaTI").addClass("active");
         $("#div_solicitante").removeClass("in active");
@@ -26,7 +34,7 @@ $(document).ready(function() {
 
 })
 
-function datasHoras(){
+function datasHoras() {
     var camposDatas = FLUIGC.calendar('#dt_dataInicialGozo, #dt_dataFinalGozo, #txt_periodoAbonoDe, #txt_periodoAbonoAte, #txt_substFeriasApartir, #txt_periodoGozoDe, #txt_periodoGozoAte', {
         pickDate: true,
         pickTime: false
