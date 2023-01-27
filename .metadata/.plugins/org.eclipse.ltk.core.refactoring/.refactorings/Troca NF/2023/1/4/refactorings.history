@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Troca NF/forms/73987 - TrocadeNotas&apos; to &apos;Troca de notas&apos;" description="Rename resource &apos;73987 - TrocadeNotas&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="forms/73987 - TrocadeNotas" name="Troca de notas" stamp="1674822026300" updateReferences="true"/>
+</session>

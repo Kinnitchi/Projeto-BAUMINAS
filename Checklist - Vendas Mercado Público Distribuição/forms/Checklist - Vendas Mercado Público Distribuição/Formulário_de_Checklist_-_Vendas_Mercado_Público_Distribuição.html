@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Form</title>
+
+            <link rel="stylesheet" type="text/css" href="/resources/style-guide/css/fluig-style-guide.min.css">
+            <script src="/resources/js/jquery/jquery.js"></script>
+            <script src="/resources/js/jquery/jquery-ui.min.js"></script>
+            <script src="/resources/js/mustache/mustache-min.js"></script>
+            <script src="/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+            <!-- CUSTOM -->
+            <link href="/resources/style-guide/css/fluig-style-guide-filter.min.css" rel="stylesheet" type="text/css">
+            <link href="/resources/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+            <script src="/resources/style-guide/js/fluig-style-guide-filter.min.js"></script>
+            <script src="/resources/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+
+            <link href='/webdesk/customresources?cid=1&resourceName=temaFormulario/0.css' type='text/css' rel='stylesheet' />
+		</head>
+        <body class="fluig-style-guide">
+			
+			<form class="totvs-form grid vertical create-form-components ui-sortable t0" name="createFormComponents" style="padding-left: 10px; padding-right: 10px;"><img src="http://w3.fluig.bauminas.local:8079/portal/api/servlet/image/01/custom/logo_image.png" alt="Logo" id="logo" style="max-height: 50px; max-width: 250px;"><h1 class="title-form-application">Formulário de Checklist - Vendas Mercado Público Distribuição</h1><div class="paragraph-is-required system-message-information alert alert-info" role="alert">Todos os campos com * são de preenchimento obrigatório.</div>
+			<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="txt_codFluig" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Número do Fluig</label><input type="text" class="form-control" name="txt_codFluig" value="" placeholder="" data-size="small" style="width: 25%;"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_Cliente"><div class="form-input"><div class="form-group"><label>Cliente:</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_Cliente" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_CodCliente"><div class="form-input"><div class="form-group"><label>Código do Cliente</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_CodCliente" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_CNPJ"><div class="form-input"><div class="form-group"><label>CNPJ</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_CNPJ" value="" placeholder="" data-size="small" required="required" mask="00.000.000/0000-00" maxlength="18" data-only-numbers="true" style="width: 25%;"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_NumPed" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Nº Pedido BAUMINAS</label><input type="text" class="form-control" name="TXT_NumPed" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_ContratoAta"><div class="form-input"><div class="form-group"><label>Contrato / Ata</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_ContratoAta" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_EditEmpenho"><div class="form-input"><div class="form-group"><label>Nº do Edital / Empenho</label><input type="text" class="form-control" name="TXT_EditEmpenho" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="date" data-show-properties="" data-field-name="DT_ContratoDe" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Início do Contrato</label><span class="required text-danger"><strong>*</strong></span><input id="date5" type="text" class="form-control" name="DT_ContratoDe" data-date="" required="required"></div></div></div><div class="form-field" data-type="date" data-show-properties="" data-field-name="Dt_ContratoAte"><div class="form-input"><div class="form-group"><label>Fim do Contrato</label><span class="required text-danger"><strong>*</strong></span><input id="date6" type="text" class="form-control" name="Dt_ContratoAte" data-date="" required="required"></div></div></div><div class="form-field" data-type="radio" data-show-properties="" data-field-name="Rd_ZerarSd"><div class="form-input"><div class="form-group"><label>Até Zerar Saldo</label><span class="required text-danger"><strong>*</strong></span><div class="radio-options"><div class="radio"><label><input type="radio" name="Rd_ZerarSd" value="Sim" required="required">Sim</label></div><div class="radio"><label><input type="radio" name="Rd_ZerarSd" value="Não" required="required">Não</label></div></div></div></div></div><div class="form-field" data-type="combo" data-show-properties="" data-field-name="CMB_UnidFaturam"><div class="form-input"><div class="form-group"><label>Unidade de Faturamento</label><span class="required text-danger"><strong>*</strong></span><select class="form-control" name="CMB_UnidFaturam" required="required"><option value="Selecione">Selecione</option><option value="Química - Cataguases">Química - Cataguases</option><option value="Química - Nova Lima">Química - Nova Lima</option><option value="N/NE - Suzano">N/NE - Suzano</option><option value="N/NE - Rio De Janeiro">N/NE - Rio De Janeiro</option><option value="N/NE - Rio Negro">N/NE - Rio Negro</option><option value="N/NE - Mucuri">N/NE - Mucuri</option><option value="N/NE - Manaus">N/NE - Manaus</option><option value="N/NE - Salvador">N/NE - Salvador</option><option value="NHEEL - Rio Claro">NHEEL - Rio Claro</option><option value="Química Sul - Lages">Química Sul - Lages</option><option value="Química Sul - Arapoti">Química Sul - Arapoti</option><option value="BAUMINAS Ambiental">BAUMINAS Ambiental</option><option value="BAUMINAS Distribuição">BAUMINAS Distribuição</option><option value="SULFABRAS">SULFABRAS</option></select></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_UnidOrigem"><div class="form-input"><div class="form-group"><label>Unidade de Origem - Licitações</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_UnidOrigem" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="txt_unidOriDist" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Unidade de Origem - Distribuição</label><input type="text" class="form-control" name="txt_unidOriDist" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_Produto"><div class="form-input"><div class="form-group"><label>Produto</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_Produto" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_CodProd" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Código do Produto</label><input type="text" class="form-control" name="TXT_CodProd" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="txt_QuantTotal" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Quantidade Licitada (em Ton)</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="txt_QuantTotal" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_QtotalKg"><div class="form-input"><div class="form-group"><label>Quantidade Total (Kg)</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_QtotalKg" value="" placeholder="" data-size="big" required="required" mask="#00.000.000.000.000,00" maxlength="22" data-only-numbers="true"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_QTotalLt"><div class="form-input"><div class="form-group"><label>Quantidade Total (Litros)</label><input type="text" class="form-control" name="TXT_QTotalLt" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_PFKg"><div class="form-input"><div class="form-group"><label>Preço Final (R$/Kg)</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_PFKg" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_PFLt"><div class="form-input"><div class="form-group"><label>Preço Final (R$/Litros)</label><input type="text" class="form-control" name="TXT_PFLt" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_CondPg"><div class="form-input"><div class="form-group"><label>Condição de Pagamento</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_CondPg" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="radio" data-show-properties="" data-field-name="Rd_PrazoEnt"><div class="form-input"><div class="form-group"><label>Prazo de Entrega</label><span class="required text-danger"><strong>*</strong></span><div class="radio-options"><div class="radio"><label><input type="radio" name="Rd_PrazoEnt" value="Dias Úteis" required="required">Dias Úteis</label></div><div class="radio"><label><input type="radio" name="Rd_PrazoEnt" value="Dias Corridos" required="required">Dias Corridos</label></div><div class="radio"><label><input type="radio" name="Rd_PrazoEnt" value="Conforme Cronograma" required="required">Conforme Cronograma</label></div></div></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_PrazoEntreg"><div class="form-input"><div class="form-group"><label>Especificar Dias</label><input type="text" class="form-control" name="TXT_PrazoEntreg" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="combo" data-show-properties="" data-field-name="CMB_TipoFrete"><div class="form-input"><div class="form-group"><label>Tipo de Frete</label><span class="required text-danger"><strong>*</strong></span><select class="form-control" name="CMB_TipoFrete" required="required"><option value="Selecione">Selecione</option><option value="CIF">CIF</option><option value="FOB">FOB</option><option value="REDESPACHO">REDESPACHO</option></select></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_Valor"><div class="form-input"><div class="form-group"><label>Valor do Frete</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_Valor" value="" placeholder="" data-size="big" mask="#00.000.000.000.000,00" maxlength="22" data-only-numbers="true" required="required"></div></div></div><div class="form-field" data-type="textarea" data-show-properties="" data-field-name="TXT_SERED"><div class="form-input"><div class="form-group"><label>Se REDESPACHO, informar: Razão Social; CNPJ e Endereço da Transportadora</label><textarea class="form-control" rows="3" name="TXT_SERED" placeholder="" data-size="big"></textarea></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_TipoEntrega" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Tipo de Entrega (Granel ou Especificar Embalagem e Tamanho)</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_TipoEntrega" value="" placeholder="Granel ou Especificar Embalagem e Tamanho" data-size="big" required="required"></div></div></div><div class="form-field" data-type="checkbox" data-show-properties="" data-field-name="chk_CondEntreg" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Condição de Entrega Embalados - Marcar as Opções</label><div class="check-options"><div class="checkbox"><label><input type="checkbox" name="checkbox39opc0" value="Paletizado">Paletizado</label></div><div class="checkbox"><label><input type="checkbox" name="checkbox39opc1" value="Filmado">Filmado</label></div><div class="checkbox"><label><input type="checkbox" name="checkbox39opc2" value="Carga Batida (Solta)">Carga Batida (Solta)</label></div><div class="checkbox"><label><input type="checkbox" name="checkbox39opc3" value="Demanda Ajudante (Chapa)">Demanda Ajudante (Chapa)</label></div><div class="checkbox"><label><input type="checkbox" name="checkbox39opc4" value="Exige Logística Reversa">Exige Logística Reversa</label></div><div class="checkbox"><label><input type="checkbox" name="checkbox39opc5" value="Demanda Contratação de Empilhadeira">Demanda Contratação de Empilhadeira</label></div></div></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_HrReb"><div class="form-input"><div class="form-group"><label>Horário de Recebimento</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_HrReb" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textarea" data-show-properties="" data-field-name="TXT_ObsLogistic"><div class="form-input"><div class="form-group"><label>Observações Adicionais para a Logística (Contrato)</label><textarea class="form-control" rows="3" name="TXT_ObsLogistic" placeholder="" data-size="big"></textarea></div></div></div><div class="form-field" data-type="textarea" data-show-properties="" data-field-name="TXT_ObsLogDist" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Observações Adicionais para a Logística (Distribuição)</label><textarea class="form-control" rows="3" name="TXT_ObsLogDist" placeholder="" data-size="big"></textarea></div></div></div><div class="form-field" data-type="radio" data-show-properties="" data-field-name="Rd_Mangote" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Mangote</label><span class="required text-danger"><strong>*</strong></span><div class="radio-options"><div class="radio"><label><input type="radio" name="Rd_Mangote" value="Sim" required="required">Sim</label></div><div class="radio"><label><input type="radio" name="Rd_Mangote" value="Não" required="required">Não</label></div></div></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_MangMetros"><div class="form-input"><div class="form-group"><label>Se Sim, Especificar o Tamanho (em metros)</label><input type="text" class="form-control" name="TXT_MangMetros" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="radio" data-show-properties="" data-field-name="Rd_Bomba"><div class="form-input"><div class="form-group"><label>Bomba</label><span class="required text-danger"><strong>*</strong></span><div class="radio-options"><div class="radio"><label><input type="radio" name="Rd_Bomba" value="Sim" required="required">Sim</label></div><div class="radio"><label><input type="radio" name="Rd_Bomba" value="Não" required="required">Não</label></div></div></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_Bomba" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Se sim, Especificar o Tipo de Bomba</label><input type="text" class="form-control" name="TXT_Bomba" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="radio" data-show-properties="" data-field-name="Rd_Engate"><div class="form-input"><div class="form-group"><label>Engate</label><span class="required text-danger"><strong>*</strong></span><div class="radio-options"><div class="radio"><label><input type="radio" name="Rd_Engate" value="Sim" required="required">Sim</label></div><div class="radio"><label><input type="radio" name="Rd_Engate" value="Não" required="required">Não</label></div></div></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_Polegadas"><div class="form-input"><div class="form-group"><label>Se sim, Especificar as Polegadas</label><input type="text" class="form-control" name="TXT_Polegadas" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_EspProd"><div class="form-input"><div class="form-group"><label>Especificação do Produto</label><span class="required text-danger"><strong>*</strong></span><input type="text" class="form-control" name="TXT_EspProd" value="" placeholder="" data-size="big" required="required"></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_LaudoEsp"><div class="form-input"><div class="form-group"><label>Envio Laudos Específicos</label><input type="text" class="form-control" name="TXT_LaudoEsp" value="" placeholder="" data-size="big"></div></div></div><div class="form-field" data-type="radio" data-show-properties="" data-field-name="Rd_DemEquip" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Demanda Equipamento em Comodato</label><span class="required text-danger"><strong>*</strong></span><div class="radio-options"><div class="radio"><label><input type="radio" name="Rd_DemEquip" value="Sim" required="required">Sim</label></div><div class="radio"><label><input type="radio" name="Rd_DemEquip" value="Não" required="required">Não</label></div></div></div></div></div><div class="form-field" data-type="textbox" data-show-properties="" data-field-name="TXT_EspEquip" style="position: relative; left: 0px; top: 0px;"><div class="form-input"><div class="form-group"><label>Se Sim, Especificar</label><input type="text" class="form-control" name="TXT_EspEquip" value="" placeholder="" data-size="big"></div></div></div></form>
+		
+
+			<script type="text/javascript">
+				var keyDown = false, ctrl = 17, vKey = 86, Vkey = 118; 
+				  
+				$(document).keydown(function (e) {
+					if (e.keyCode == ctrl) keyDown = true;
+				}).keyup(function (e) {
+					if (e.keyCode == ctrl) keyDown = false;
+				});
+				
+				$('[data-only-numbers]').on('keypress', function (e) {
+				    if (!e) {
+					    var e = window.event;
+					}
+					
+				    if (e.keyCode > 0 && e.which == 0) {
+				    	 return true;
+					}
+					
+				    if (e.keyCode) {
+				        code = e.keyCode;
+					} else if (e.which) {
+				    	code = e.which;
+					}
+
+					if(code == 46) {
+						return true;
+					}
+					
+				    var character = String.fromCharCode(code);
+				    if (character == '\b' || character == ' ' || character == '\t') {
+				    	 return true;
+					}
+				    if (keyDown && (code == vKey || code == Vkey)) {
+				    	return (character);
+					} else  {
+						return (/[0-9]$/.test(character));
+					}
+				}).on('focusout', function (e) {
+				    var $this = $(this);
+					if($this.val() == "") {
+						return true;
+					}
+				    $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				}).on('paste', function (e) {
+				    var $this = $(this);
+				    setTimeout(function () {
+				        $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				    }, 5);
+				 });				
+
+				
+
+				$('.create-form-components').on('keyup', 'input[required="required"][type="text"], input[required="required"][type="number"], input[required="required"][type="date"], textarea[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				$('.create-form-components').on('change', 'input[required="required"][type="checkbox"], input[required="required"][type="radio"], select[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				function validationFieldsForm(field, type){
+					if(type === "checkbox" || type === "radio"){
+						if(!field.is(':checked')){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}else{
+						if(!field.val().trim()){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}
+				}
+
+				var $zoomPreview = $(".zoom-preview");
+				if ($zoomPreview.length) {
+                    $zoomPreview.parent().removeClass("input-group");
+                    $zoomPreview.remove();
+                }
+
+				var ratings = $(".rating");
+				if (ratings.length > 0) ratingStars(ratings);
+				function ratingStars(stars) {
+					$.each(stars, function(i, obj) {
+                        var field = $(this).closest(".form-group").find(".rating-value");
+						var tgt = $(obj);
+						tgt.html("");
+						var rating = FLUIGC.stars(tgt, { value: field.val() });
+                        rating.on("click", function(o) {
+                            field.val($(this).index() + 1);
+                        });
+					});
+				}
+
+				$.each($("[data-date]"), function(i, o) {
+                    var id = $(o).attr("id");
+					FLUIGC.calendar("#" + id);
+				});
+
+				$(document).ready(function() {
+					$.each($("[data-date]"), function(i, o) {
+	                    var id = $(o).attr("id");
+	                    if($("#" + id).attr("readonly")) {
+	                    	$("#" + id).data('DateTimePicker').disable();
+	                    }
+					});
+				});
+			</script>
+		</body>
+	</html>

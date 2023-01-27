@@ -1,4 +1,4 @@
-function afterTaskComplete(colleagueId,nextSequenceId,userList){
+function afterTaskComplete(colleagueId, nextSequenceId, userList) {
 	log.info("Teste123");
 	log.info("colleagueId: " + colleagueId);
 	log.info("nextSequenceId: " + nextSequenceId);

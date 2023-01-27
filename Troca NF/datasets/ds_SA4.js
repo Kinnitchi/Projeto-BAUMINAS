@@ -13,7 +13,7 @@ function createDataset(fields, constraints, sortFields) {
             }
         }
 
-        var query = " DISTINCT TOP 500 A4_COD, A4_NOME, A4_NREDUZ, A4_CGC, CONCAT(A4_COD, ' - ' ,A4_NOME) AS COD_DESC FROM SA4010 SA4 WHERE D_E_L_E_T_ != '*' "
+        var query = " DISTINCT TOP 500 A4_COD, A4_NOME, A4_NREDUZ, A4_CGC, A4_EMAIL, CONCAT(A4_COD, ' - ' ,A4_NOME) AS COD_DESC FROM SA4010 SA4 WHERE D_E_L_E_T_ != '*' "
 
         var clientService = fluigAPI.getAuthorizeClientService();
 
@@ -49,6 +49,7 @@ function createDataset(fields, constraints, sortFields) {
             dataset.addColumn("A4_COD");
             dataset.addColumn("A4_NOME");
             dataset.addColumn("COD_DESC");
+            dataset.addColumn("A4_EMAIL");
 
             var retApi = JSON.parse(result.getResult());
 

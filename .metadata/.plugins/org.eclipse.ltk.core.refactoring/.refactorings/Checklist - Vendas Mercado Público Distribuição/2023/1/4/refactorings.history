@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Vendas publicas/forms/82 - Formulário de Checklist - Vendas Mercado Público Distribuição&apos; to &apos;Checklist - Vendas Mercado Público Distribuição&apos;" description="Rename resource &apos;82 - Formulário de Checklist - Vendas Mercado Público Distribuição&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="forms/82 - Formulário de Checklist - Vendas Mercado Público Distribuição" name="Checklist - Vendas Mercado Público Distribuição" stamp="1674821972561" updateReferences="true"/>
+</session>

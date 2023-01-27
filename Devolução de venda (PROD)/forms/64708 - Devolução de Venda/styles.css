@@ -1,0 +1,13 @@
+#principal{
+    overflow-x: hidden;
+}
+.obrigatorio, #obsRNC, #txtMotivo{
+    color: red;
+}
+#txtMotivo{
+    font-size: 12px;
+    margin-top: -7px;
+}
+input[type="radio"]{
+    padding-top: 3px;
+}
