@@ -1,0 +1,388 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+		<link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="custom.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="principal" class="fluig-style-guide">
+			<form name="form" role="form">
+
+				<input type="hidden" name="atividade" id="atividade">
+
+				<div class="row">
+					<div class="page-header col-xs-12">
+						<h1 class="text-center">GQ - FÉRIAS E SUBSTITUIÇÃO DE FÉRIAS</h1>
+					</div>
+				</div>
+
+				<div class="row">
+					<div id="navbar" class="col-xs-12">
+						<ul class="nav nav-pills" role="tablist">
+							<li id="guiaSolicitante" class="nav-item active fs-md-margin-left">
+								<a href="#div_solicitante" role="tab" data-toggle="pill">Solicitante</a>
+							</li>
+							<li id="guiaGerente" class="nav-item">
+								<a href="#div_gerente" role="tab" data-toggle="pill">Gerente</a>
+							</li>
+							<li id="guiaRH" class="nav-item">
+								<a href="#div_RH" role="tab" data-toggle="pill">RH</a>
+							</li>
+							<li id="guiaDP" class="nav-item">
+								<a href="#div_DP" role="tab" data-toggle="pill">DP</a>
+							</li>
+							<li id="guiaTI" class="nav-item">
+								<a href="#div_TI" role="tab" data-toggle="pill">TI</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tab-content">
+					<div id="div_solicitante" class="tab-pane fade in active">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Dados do solicitante</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label>Estabelecimento:</label>
+										<br>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_estabelecimento" value="guaiba" id="rad_guaiba">
+											<label for="rad_guaiba">Amb_Guaiba</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_estabelecimento" value="imbau" id="rad_imbau">
+											<label for="rad_imbau">Amb_Imbau</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_estabelecimento" value="lages" id="rad_lages">
+											<label for="rad_lages">Amb_Lages</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_estabelecimento" value="rioNegro" id="rad_rioNegro">
+											<label for="rad_rioNegro">Amb_Rio Negro</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-12 col-sm-6">
+										<label for="txt_solicitanteNome">Nome:</label>
+										<input type="text" id="txt_solicitanteNome" name="txt_solicitanteNome" class="form-control">
+									</div>
+									<div class="form-group col-xs-12 col-sm-6">
+										<label for="cmb_solicitanteSetor">Setor:</label>
+										<input
+											type="zoom"
+											id = "cmb_solicitanteSetor"
+											name="cmb_solicitanteSetor"
+											data-zoom="{
+												'displayKey':'descricaoSetores',
+												'datasetId':'DScadastroSetores',
+												'fields':[
+													{
+													'field':'id',
+													'label':'ID'
+													},{
+													'field':'descricaoSetores',
+													'label':'Setor',
+													'standard':'true'
+													}
+												]
+											}"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Dados da solicitação</h3>
+							</div>
+							<div class="panel-body">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">Identificação</h3>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="form-group col-xs-12">
+												<label for="txt_colaboradorNome">Colaborador:</label>
+												<input type="text" id="txt_colaboradorNome" name="txt_colaboradorNome" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="txt_colaboradorCentroCusto">Centro de custo:</label>
+												<input type="text" id="txt_colaboradorCentroCusto" name="txt_colaboradorCentroCusto" class="form-control">
+											</div>
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="txt_colaboradorMatricula">Matrícula:</label>
+												<input type="text" id="txt_colaboradorMatricula" name="txt_colaboradorMatricula" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">Férias</h3>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="dt_dataInicialGozo">Data inicial do gozo:</label>
+												<input type="text" id="dt_dataInicialGozo" name="dt_dataInicialGozo" class="form-control" mask="00/00/0000">
+											</div>
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="dt_dataFinalGozo">Data final do gozo:</label>
+												<input type="text" id="dt_dataFinalGozo" name="dt_dataFinalGozo" class="form-control" mask="00/00/0000">
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="txt_periodoAquisitivoInicial">Período aquisitivo inicial:</label>
+												<input type="text" id="txt_periodoAquisitivoInicial" name="txt_periodoAquisitivoInicial" class="form-control">
+											</div>
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="txt_periodoAquisitivoFinal">Período aquisitivo final:</label>
+												<input type="text" id="txt_periodoAquisitivoFinal" name="txt_periodoAquisitivoFinal" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-xs-12 col-sm-6 fs-lg-margin-top">
+												<label>Abono pecuniário:</label>
+												<br>
+												<div class="custom-radio custom-radio-inline custom-radio-primary">
+													<input type="radio" name="rad_abonoPecuniario" value="Sim" id="rad_abonoPecuniarioSim">
+													<label for="rad_abonoPecuniarioSim">Sim</label>
+												</div>
+												<div class="custom-radio custom-radio-inline custom-radio-primary">
+													<input type="radio" name="rad_abonoPecuniario" value="Nao" id="rad_abonoPecuniarioNao">
+													<label for="rad_abonoPecuniarioNao">Não</label>
+												</div>
+											</div>
+											<div class="form-group col-xs-12 col-sm-6">
+												<div class="text-center">
+													<label>Período do abono:</label>
+												</div>
+												<div class="form-group col-xs-6 fs-no-padding-left">
+													<label for="txt_periodoAbonoDe">De:</label>
+													<input type="text" id="txt_periodoAbonoDe" name="txt_periodoAbonoDe" class="form-control" mask="00/00/0000">
+												</div>
+												<div class="form-group col-xs-6">
+													<label for="txt_periodoAbonoAte">Até:</label>
+													<input type="text" id="txt_periodoAbonoAte" name="txt_periodoAbonoAte" class="form-control" mask="00/00/0000">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-xs-12 col-sm-6">
+												<label>Adiantamento 13º:</label>
+												<br>
+												<div class="custom-radio custom-radio-inline custom-radio-primary">
+													<input type="radio" name="rad_adiantamento13" value="Sim" id="rad_adiantamento13Sim">
+													<label for="rad_adiantamento13Sim">Sim</label>
+												</div>
+												<div class="custom-radio custom-radio-inline custom-radio-primary">
+													<input type="radio" name="rad_adiantamento13" value="Nao" id="rad_adiantamento13Nao">
+													<label for="rad_adiantamento13Nao">Não</label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-xs-12">
+												<label for="txtarea_feriasObs">Observação:</label>
+												<textarea class="form-control" name="txtarea_feriasObs" id="txtarea_feriasObs" rows="4" style="resize: none;"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">Substituição de férias</h3>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="txt_substFeriasApartir">A partir de:</label>
+												<input type="text" id="txt_substFeriasApartir" name="txt_substFeriasApartir" class="form-control" mask="00/00/0000">
+											</div>
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="txt_substFeriasCentroCusti">Centro de custo:</label>
+												<input type="text" id="txt_substFeriasCentroCusti" name="txt_substFeriasCentroCusti" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-xs-12 col-sm-6">
+												<label for="txt_colaboradorSubstituto">Colaborador substituto:</label>
+												<input type="text" id="txt_colaboradorSubstituto" name="txt_colaboradorSubstituto" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-xs-12">
+												<label for="txtarea_substFeriasObs">Observação:</label>
+												<textarea class="form-control" name="txtarea_substFeriasObs" id="txtarea_substFeriasObs" rows="4" style="resize: none;"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="div_gerente" class="tab-pane fade">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Gerente - aprovação</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label>Aprovado</label>
+										<br>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_gerenteDeAcordo" value="Sim" id="rad_gerenteSim">
+											<label for="rad_gerenteSim">Sim</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_gerenteDeAcordo" value="Nao" id="rad_gerenteNao">
+											<label for="rad_gerenteNao">Não</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_gerenteDeAcordo" value="Ajustar" id="rad_gerenteAjustar">
+											<label for="rad_gerenteAjustar">Ajustar</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label for="txtarea_gerenteObs">Observação:</label>
+										<textarea class="form-control" name="txtarea_gerenteObs" id="txtarea_gerenteObs" rows="4" style="resize: none;"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="div_RH" class="tab-pane fade">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">RH</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label>Aprovado</label>
+										<br>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_rhDeAcordo" value="Sim" id="rad_rhSim">
+											<label for="rad_rhSim">Sim</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_rhDeAcordo" value="Nao" id="rad_rhNao">
+											<label for="rad_rhNao">Não</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_rhDeAcordo" value="AjustarGerente" id="rad_rhAjustarGerente">
+											<label for="rad_rhAjustarGerente">Ajustar gerente</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_rhDeAcordo" value="AjustarSolicitante" id="rad_rhAjustarSolicitante">
+											<label for="rad_rhAjustarSolicitante">Ajustar solicitante</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label for="txtarea_rhObs">Observação:</label>
+										<textarea class="form-control" name="txtarea_rhObs" id="txtarea_rhObs" rows="4" style="resize: none;"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="div_DP" class="tab-pane fade">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">DP</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label>Aprovado</label>
+										<br>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_dpDeAcordo" value="Sim" id="rad_dpSim">
+											<label for="rad_dpSim">Sim</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_dpDeAcordo" value="Nao" id="rad_dpNao">
+											<label for="rad_dpNao">Não</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_dpDeAcordo" value="AjustarRH" id="rad_dpAjustarRH">
+											<label for="rad_dpAjustarRH">Ajustar RH</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_dpDeAcordo" value="AjustarSolicitante" id="rad_dpAjustarSolicitante">
+											<label for="rad_dpAjustarSolicitante">Ajustar solicitante</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label for="txtarea_dpObs">Observação:</label>
+										<textarea class="form-control" name="txtarea_dpObs" id="txtarea_dpObs" rows="4" style="resize: none;"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="div_TI" class="tab-pane fade">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">TI</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label>Senhas alteradas</label>
+										<br>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_tiDeAcordo" value="Sim" id="rad_tiSim">
+											<label for="rad_tiSim">Sim</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_tiDeAcordo" value="Nao" id="rad_tiNao">
+											<label for="rad_tiNao">Não</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_tiDeAcordo" value="AjustarDP" id="rad_tiAjustarDP">
+											<label for="rad_tiAjustarDP">Ajustar DP</label>
+										</div>
+										<div class="custom-radio custom-radio-inline custom-radio-primary">
+											<input type="radio" name="rad_tiDeAcordo" value="AjustarSolicitante" id="rad_tiAjustarSolicitante">
+											<label for="rad_tiAjustarSolicitante">Ajustar solicitante</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<label for="txtarea_tiObs">Observação:</label>
+										<textarea class="form-control" name="txtarea_tiObs" id="txtarea_tiObs" rows="4" style="resize: none;"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</form>
+		</div>
+	</body>
+</html>

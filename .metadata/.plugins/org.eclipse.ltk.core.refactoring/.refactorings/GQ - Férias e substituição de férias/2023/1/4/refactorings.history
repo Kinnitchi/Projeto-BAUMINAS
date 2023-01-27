@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;GQ - Férias e substituição de férias/forms/74633 - AMB_RH_FERIAS&apos; to &apos;AMB RH FERIAS&apos;" description="Rename resource &apos;74633 - AMB_RH_FERIAS&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="forms/74633 - AMB_RH_FERIAS" name="AMB RH FERIAS" stamp="1674824437746" updateReferences="true"/>
+</session>
