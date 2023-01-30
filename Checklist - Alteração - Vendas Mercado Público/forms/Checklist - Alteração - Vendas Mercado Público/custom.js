@@ -35,13 +35,15 @@ $(document).ready(function () {
 
 		if (id.is(':checked').toString() != idOriginal) {
 
-			id.siblings()[2].setAttribute('class', 'text-warning');
-			id.parent().removeClass('custom-checkbox-primary').addClass('custom-checkbox-warning');
+			$("#" + e.target.id + "Hidden").val('Mudou');
+			id.siblings()[2].classList.remove('text-warning');
+			id.parent().removeClass('custom-checkbox-warning').addClass('custom-checkbox-primary');
 
 		} else {
 
-			id.siblings()[2].classList.remove('text-warning');
-			id.parent().removeClass('custom-checkbox-warning').addClass('custom-checkbox-primary');
+			$("#" + e.target.id + "Hidden").val('');
+			id.siblings()[2].setAttribute('class', 'text-warning');
+			id.parent().removeClass('custom-checkbox-primary').addClass('custom-checkbox-warning');
 
 		}
 
@@ -54,9 +56,9 @@ $(function () {
 
 
 
-	// if ($("#atividade").val() != "7") {
-	// 	carregarCalendar();
-	// }
+	if ($("#atividade").val() != "7") {
+		carregarCalendar();
+	}
 	carregarDivsRetorno();
 
 	if ($("#atividade").val() == "" || $("#atividade").val() == "0" || $("#atividade").val() == "4") {
@@ -80,6 +82,8 @@ $(function () {
 
 	$('#numeroFluig').change(function () {
 
+		var loading = FLUIGC.loading(window);
+		loading.show();
 		// Códigos verificando dataset
 		var con1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
 		var con2 = DatasetFactory.createConstraint("numeroFluig", $("#numeroFluig").val(), $("#numeroFluig").val(), ConstraintType.MUST);
@@ -269,7 +273,7 @@ $(function () {
 					ds.values[0].checkbox41opc4.trim() != "" ? $("#optExigeLogReversa").prop("checked", true) : $("#optExigeLogReversa").prop("checked", false);
 					ds.values[0].checkbox41opc5.trim() != "" ? $("#optDemandaContratEmpilh").prop("checked", true) : $("#optDemandaContratEmpilh").prop("checked", false)
 
-
+					loading.hide();
 				} else {
 
 					FLUIGC.toast({
@@ -280,6 +284,7 @@ $(function () {
 
 				}
 			}
+			loading.hide();
 			buscaHistorico();
 			verifyCheckbox();
 		} else {
@@ -309,7 +314,7 @@ function verificarAlteracao(id, texto) {
 			valorOriginal = "(Vazio)";
 		}
 		$('#' + id).prop('title', "Valor Original: " + valorOriginal);
-		$('#' + id + 'OriginalSpan').html("Valor Original: " + valorOriginal);
+		$('#' + id + 'ValSpan').html("Valor Original: " + valorOriginal);
 
 
 	} else {
@@ -322,6 +327,12 @@ function verificarAlteracao(id, texto) {
 			element.title = "";
 		}
 	}
+}
+const carregarCalendar = () => {
+	FLUIGC.calendar('#vigenciaContratoIni, #vigenciaContratoFim', {
+		pickDate: true,
+		pickTime: false
+	})
 }
 
 function carregarDivsRetorno() {
@@ -368,13 +379,13 @@ const changeCheckbox = () => {
 
 		if (arr[index].checked.toString() != idOriginal) {
 
-			$(id).parent().removeClass('custom-checkbox-primary').addClass('custom-checkbox-warning');
-			$(id).siblings()[2].setAttribute('class', 'text-warning');
+			$(id).siblings()[2].classList.remove('text-warning');
+			$(id).parent().removeClass('custom-checkbox-warning').addClass('custom-checkbox-primary');
 
 		} else {
 
-			$(id).siblings()[2].classList.remove('text-warning');
-			$(id).parent().removeClass('custom-checkbox-warning').addClass('custom-checkbox-primary');
+			$(id).parent().removeClass('custom-checkbox-primary').addClass('custom-checkbox-warning');
+			$(id).siblings()[2].setAttribute('class', 'text-warning');
 
 		}
 	}
