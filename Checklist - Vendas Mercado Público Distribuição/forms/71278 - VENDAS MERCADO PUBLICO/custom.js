@@ -286,35 +286,33 @@ function openModal() {
 					$("#TXT_EspEquip").val(dsSolCopia.values[0].TXT_EspEquip);
 					$("#PAR_OBSAREALICT").val(dsSolCopia.values[0].PAR_OBSAREALICT);
 
+					dsSolCopia.values[0].sel_tipoEntrega0 ? $("#sel_tipoEntrega0").prop("checked", true) : $("#sel_tipoEntrega0").prop("checked", true);
+					dsSolCopia.values[0].sel_tipoEntrega1 ? $("#sel_tipoEntrega1").prop("checked", true) : $("#sel_tipoEntrega1").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega2 ? $("#sel_tipoEntrega2").prop("checked", true) : $("#sel_tipoEntrega2").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega3 ? $("#sel_tipoEntrega3").prop("checked", true) : $("#sel_tipoEntrega3").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega4 ? $("#sel_tipoEntrega4").prop("checked", true) : $("#sel_tipoEntrega4").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega5 ? $("#sel_tipoEntrega5").prop("checked", true) : $("#sel_tipoEntrega5").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega6 ? $("#sel_tipoEntrega6").prop("checked", true) : $("#sel_tipoEntrega6").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega7 ? $("#sel_tipoEntrega7").prop("checked", true) : $("#sel_tipoEntrega7").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega8 ? $("#sel_tipoEntrega8").prop("checked", true) : $("#sel_tipoEntrega8").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega9 ? $("#sel_tipoEntrega9").prop("checked", true) : $("#sel_tipoEntrega9").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega10 ? $("#sel_tipoEntrega10").prop("checked", true) : $("#sel_tipoEntrega10").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega11 ? $("#sel_tipoEntrega11").prop("checked", true) : $("#sel_tipoEntrega11").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega12 ? $("#sel_tipoEntrega12").prop("checked", true) : $("#sel_tipoEntrega12").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega13 ? $("#sel_tipoEntrega13").prop("checked", true) : $("#sel_tipoEntrega13").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega14 ? $("#sel_tipoEntrega14").prop("checked", true) : $("#sel_tipoEntrega14").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega15 ? $("#sel_tipoEntrega15").prop("checked", true) : $("#sel_tipoEntrega15").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega16 ? $("#sel_tipoEntrega16").prop("checked", true) : $("#sel_tipoEntrega16").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega17 ? $("#sel_tipoEntrega17").prop("checked", true) : $("#sel_tipoEntrega17").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega18 ? $("#sel_tipoEntrega18").prop("checked", true) : $("#sel_tipoEntrega18").prop("checked", false);
+					dsSolCopia.values[0].sel_tipoEntrega19 ? $("#sel_tipoEntrega19").prop("checked", true) : $("#sel_tipoEntrega19").prop("checked", false);
 
-					dsSolCopia.values[0].sel_tipoEntrega0 ? $("#sel_tipoEntrega1").prop("checked", true) : $("#sel_tipoEntrega1").prop("checked", true);
-					dsSolCopia.values[0].sel_tipoEntrega1 ? $("#sel_tipoEntrega2").prop("checked", true) : $("#sel_tipoEntrega2").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega2 ? $("#sel_tipoEntrega3").prop("checked", true) : $("#sel_tipoEntrega3").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega3 ? $("#sel_tipoEntrega4").prop("checked", true) : $("#sel_tipoEntrega4").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega4 ? $("#sel_tipoEntrega5").prop("checked", true) : $("#sel_tipoEntrega5").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega5 ? $("#sel_tipoEntrega6").prop("checked", true) : $("#sel_tipoEntrega6").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega6 ? $("#sel_tipoEntrega7").prop("checked", true) : $("#sel_tipoEntrega7").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega7 ? $("#sel_tipoEntrega8").prop("checked", true) : $("#sel_tipoEntrega8").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega8 ? $("#sel_tipoEntrega9").prop("checked", true) : $("#sel_tipoEntrega9").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega9 ? $("#sel_tipoEntrega10").prop("checked", true) : $("#sel_tipoEntrega10").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega10 ? $("#sel_#tipoEntrega11").prop("checked", true) : $("#sel_#tipoEntrega11").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega11 ? $("#sel_#tipoEntrega12").prop("checked", true) : $("#sel_#tipoEntrega12").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega12 ? $("#sel_#tipoEntrega13").prop("checked", true) : $("#sel_#tipoEntrega13").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega13 ? $("#sel_#tipoEntrega14").prop("checked", true) : $("#sel_#tipoEntrega14").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega14 ? $("#sel_#tipoEntrega15").prop("checked", true) : $("#sel_#tipoEntrega15").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega15 ? $("#sel_#tipoEntrega16").prop("checked", true) : $("#sel_#tipoEntrega16").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega16 ? $("#sel_#tipoEntrega17").prop("checked", true) : $("#sel_#tipoEntrega17").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega17 ? $("#sel_tipoEntrega18").prop("checked", true) : $("#sel_tipoEntrega18").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega18 ? $("#sel_tipoEntrega19").prop("checked", true) : $("#sel_tipoEntrega19").prop("checked", false);
-					dsSolCopia.values[0].sel_tipoEntrega19 ? $("#sel_tipoEntrega20").prop("checked", true) : $("#sel_tipoEntrega20").prop("checked", false);
-
-					dsSolCopia.values[0].checkbox41opc0 ? $("#optPaletizado").prop("checked", true) : $("#optPaletizado").prop("checked", false);
-					dsSolCopia.values[0].checkbox41opc1 ? $("#optFilmado").prop("checked", true) : $("#optFilmado").prop("checked", false);
-					dsSolCopia.values[0].checkbox41opc2 ? $("#optCargaBatida").prop("checked", true) : $("#optCargaBatida").prop("checked", false);
-					dsSolCopia.values[0].checkbox41opc3 ? $("#optDemandaAjudante").prop("checked", true) : $("#optDemandaAjudante").prop("checked", false);
-					dsSolCopia.values[0].checkbox41opc4 ? $("#optExigeLogReversa").prop("checked", true) : $("#optExigeLogReversa").prop("checked", false);
-					dsSolCopia.values[0].checkbox41opc5 ? $("#optDemandaContratEmpilh").prop("checked", true) : $("#optDemandaContratEmpilh").prop("checked", false);
-
+					dsSolCopia.values[0].checkbox41opc0 ? $("#checkbox41opc0").prop("checked", true) : $("#checkbox41opc0").prop("checked", false);
+					dsSolCopia.values[0].checkbox41opc1 ? $("#checkbox41opc1").prop("checked", true) : $("#checkbox41opc1").prop("checked", false);
+					dsSolCopia.values[0].checkbox41opc2 ? $("#checkbox41opc2").prop("checked", true) : $("#checkbox41opc2").prop("checked", false);
+					dsSolCopia.values[0].checkbox41opc3 ? $("#checkbox41opc3").prop("checked", true) : $("#checkbox41opc3").prop("checked", false);
+					dsSolCopia.values[0].checkbox41opc4 ? $("#checkbox41opc4").prop("checked", true) : $("#optExigeLogReversa").prop("checked", false);
+					dsSolCopia.values[0].checkbox41opc5 ? $("#checkbox41opc5").prop("checked", true) : $("#checkbox41opc5").prop("checked", false);
 
 				} else {
 
@@ -380,34 +378,33 @@ function openModal() {
 						$("#TXT_EspEquip").val(dsSolCopia.values[0].TXT_EspEquip);
 						$("#PAR_OBSAREALICT").val(dsSolCopia.values[0].PAR_OBSAREALICT);
 
+						dsSolCopia.values[0].sel_tipoEntrega0 ? $("#sel_tipoEntrega0").prop("checked", true) : $("#sel_tipoEntrega0").prop("checked", true);
+						dsSolCopia.values[0].sel_tipoEntrega1 ? $("#sel_tipoEntrega1").prop("checked", true) : $("#sel_tipoEntrega1").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega2 ? $("#sel_tipoEntrega2").prop("checked", true) : $("#sel_tipoEntrega2").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega3 ? $("#sel_tipoEntrega3").prop("checked", true) : $("#sel_tipoEntrega3").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega4 ? $("#sel_tipoEntrega4").prop("checked", true) : $("#sel_tipoEntrega4").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega5 ? $("#sel_tipoEntrega5").prop("checked", true) : $("#sel_tipoEntrega5").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega6 ? $("#sel_tipoEntrega6").prop("checked", true) : $("#sel_tipoEntrega6").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega7 ? $("#sel_tipoEntrega7").prop("checked", true) : $("#sel_tipoEntrega7").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega8 ? $("#sel_tipoEntrega8").prop("checked", true) : $("#sel_tipoEntrega8").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega9 ? $("#sel_tipoEntrega9").prop("checked", true) : $("#sel_tipoEntrega9").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega10 ? $("#sel_tipoEntrega10").prop("checked", true) : $("#sel_tipoEntrega10").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega11 ? $("#sel_tipoEntrega11").prop("checked", true) : $("#sel_tipoEntrega11").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega12 ? $("#sel_tipoEntrega12").prop("checked", true) : $("#sel_tipoEntrega12").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega13 ? $("#sel_tipoEntrega13").prop("checked", true) : $("#sel_tipoEntrega13").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega14 ? $("#sel_tipoEntrega14").prop("checked", true) : $("#sel_tipoEntrega14").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega15 ? $("#sel_tipoEntrega15").prop("checked", true) : $("#sel_tipoEntrega15").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega16 ? $("#sel_tipoEntrega16").prop("checked", true) : $("#sel_tipoEntrega16").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega17 ? $("#sel_tipoEntrega17").prop("checked", true) : $("#sel_tipoEntrega17").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega18 ? $("#sel_tipoEntrega18").prop("checked", true) : $("#sel_tipoEntrega18").prop("checked", false);
+						dsSolCopia.values[0].sel_tipoEntrega19 ? $("#sel_tipoEntrega19").prop("checked", true) : $("#sel_tipoEntrega19").prop("checked", false);
 
-
-						dsSolCopia.values[0].sel_tipoEntrega0.trim() != "" ? $("#tipoEntrega1").prop("checked", true) : $("#tipoEntrega1").prop("checked", true);
-						dsSolCopia.values[0].sel_tipoEntrega1.trim() != "" ? $("#tipoEntrega2").prop("checked", true) : $("#tipoEntrega2").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega2.trim() != "" ? $("#tipoEntrega3").prop("checked", true) : $("#tipoEntrega3").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega3.trim() != "" ? $("#tipoEntrega4").prop("checked", true) : $("#tipoEntrega4").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega4.trim() != "" ? $("#tipoEntrega5").prop("checked", true) : $("#tipoEntrega5").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega5.trim() != "" ? $("#tipoEntrega6").prop("checked", true) : $("#tipoEntrega6").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega6.trim() != "" ? $("#tipoEntrega7").prop("checked", true) : $("#tipoEntrega7").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega7.trim() != "" ? $("#tipoEntrega8").prop("checked", true) : $("#tipoEntrega8").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega8.trim() != "" ? $("#tipoEntrega9").prop("checked", true) : $("#tipoEntrega9").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega9.trim() != "" ? $("#tipoEntrega10").prop("checked", true) : $("#tipoEntrega10").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega10.trim() != "" ? $("#tipoEntrega11").prop("checked", true) : $("#tipoEntrega11").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega11.trim() != "" ? $("#tipoEntrega12").prop("checked", true) : $("#tipoEntrega12").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega12.trim() != "" ? $("#tipoEntrega13").prop("checked", true) : $("#tipoEntrega13").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega13.trim() != "" ? $("#tipoEntrega14").prop("checked", true) : $("#tipoEntrega14").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega14.trim() != "" ? $("#tipoEntrega15").prop("checked", true) : $("#tipoEntrega15").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega15.trim() != "" ? $("#tipoEntrega16").prop("checked", true) : $("#tipoEntrega16").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega16.trim() != "" ? $("#tipoEntrega17").prop("checked", true) : $("#tipoEntrega17").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega17.trim() != "" ? $("#tipoEntrega18").prop("checked", true) : $("#tipoEntrega18").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega18.trim() != "" ? $("#tipoEntrega19").prop("checked", true) : $("#tipoEntrega19").prop("checked", false);
-						dsSolCopia.values[0].sel_tipoEntrega19.trim() != "" ? $("#tipoEntrega20").prop("checked", true) : $("#tipoEntrega20").prop("checked", false);
-						dsSolCopia.values[0].checkbox41opc0.trim() != "" ? $("#optPaletizado").prop("checked", true) : $("#optPaletizado").prop("checked", false);
-						dsSolCopia.values[0].checkbox41opc1.trim() != "" ? $("#optFilmado").prop("checked", true) : $("#optFilmado").prop("checked", false);
-						dsSolCopia.values[0].checkbox41opc2.trim() != "" ? $("#optCargaBatida").prop("checked", true) : $("#optCargaBatida").prop("checked", false);
-						dsSolCopia.values[0].checkbox41opc3.trim() != "" ? $("#optDemandaAjudante").prop("checked", true) : $("#optDemandaAjudante").prop("checked", false);
-						dsSolCopia.values[0].checkbox41opc4.trim() != "" ? $("#optExigeLogReversa").prop("checked", true) : $("#optExigeLogReversa").prop("checked", false);
-						dsSolCopia.values[0].checkbox41opc5.trim() != "" ? $("#optDemandaContratEmpilh").prop("checked", true) : $("#optDemandaContratEmpilh").prop("checked", false);
+						dsSolCopia.values[0].checkbox41opc0 ? $("#checkbox41opc0").prop("checked", true) : $("#checkbox41opc0").prop("checked", false);
+						dsSolCopia.values[0].checkbox41opc1 ? $("#checkbox41opc1").prop("checked", true) : $("#checkbox41opc1").prop("checked", false);
+						dsSolCopia.values[0].checkbox41opc2 ? $("#checkbox41opc2").prop("checked", true) : $("#checkbox41opc2").prop("checked", false);
+						dsSolCopia.values[0].checkbox41opc3 ? $("#checkbox41opc3").prop("checked", true) : $("#checkbox41opc3").prop("checked", false);
+						dsSolCopia.values[0].checkbox41opc4 ? $("#checkbox41opc4").prop("checked", true) : $("#optExigeLogReversa").prop("checked", false);
+						dsSolCopia.values[0].checkbox41opc5 ? $("#checkbox41opc5").prop("checked", true) : $("#checkbox41opc5").prop("checked", false);
 
 					}
 

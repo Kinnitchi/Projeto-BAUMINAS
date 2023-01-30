@@ -245,33 +245,33 @@ $(function () {
 					$("#obsLicitacoes, #obsLicitacoesOriginal").val(ds.values[0].PAR_OBSAREALICT);
 					$("#obsAtendimentoClientes, #obsAtendimentoClientesOriginal").val(ds.values[0].obsAtendimentoClientes);
 
-					ds.values[0].sel_tipoEntrega0.trim() != "" ? $("#tipoEntrega1").prop("checked", true) : $("#tipoEntrega1").prop("checked", false);
-					ds.values[0].sel_tipoEntrega1.trim() != "" ? $("#tipoEntrega2").prop("checked", true) : $("#tipoEntrega2").prop("checked", false);
-					ds.values[0].sel_tipoEntrega2.trim() != "" ? $("#tipoEntrega3").prop("checked", true) : $("#tipoEntrega3").prop("checked", false);
-					ds.values[0].sel_tipoEntrega3.trim() != "" ? $("#tipoEntrega4").prop("checked", true) : $("#tipoEntrega4").prop("checked", false);
-					ds.values[0].sel_tipoEntrega4.trim() != "" ? $("#tipoEntrega5").prop("checked", true) : $("#tipoEntrega5").prop("checked", false);
-					ds.values[0].sel_tipoEntrega5.trim() != "" ? $("#tipoEntrega6").prop("checked", true) : $("#tipoEntrega6").prop("checked", false);
-					ds.values[0].sel_tipoEntrega6.trim() != "" ? $("#tipoEntrega7").prop("checked", true) : $("#tipoEntrega7").prop("checked", false);
-					ds.values[0].sel_tipoEntrega7.trim() != "" ? $("#tipoEntrega8").prop("checked", true) : $("#tipoEntrega8").prop("checked", false);
-					ds.values[0].sel_tipoEntrega8.trim() != "" ? $("#tipoEntrega9").prop("checked", true) : $("#tipoEntrega9").prop("checked", false);
-					ds.values[0].sel_tipoEntrega9.trim() != "" ? $("#tipoEntrega10").prop("checked", true) : $("#tipoEntrega10").prop("checked", false);
-					ds.values[0].sel_tipoEntrega10.trim() != "" ? $("#tipoEntrega11").prop("checked", true) : $("#tipoEntrega11").prop("checked", false);
-					ds.values[0].sel_tipoEntrega11.trim() != "" ? $("#tipoEntrega12").prop("checked", true) : $("#tipoEntrega12").prop("checked", false);
-					ds.values[0].sel_tipoEntrega12.trim() != "" ? $("#tipoEntrega13").prop("checked", true) : $("#tipoEntrega13").prop("checked", false);
-					ds.values[0].sel_tipoEntrega13.trim() != "" ? $("#tipoEntrega14").prop("checked", true) : $("#tipoEntrega14").prop("checked", false);
-					ds.values[0].sel_tipoEntrega14.trim() != "" ? $("#tipoEntrega15").prop("checked", true) : $("#tipoEntrega15").prop("checked", false);
-					ds.values[0].sel_tipoEntrega15.trim() != "" ? $("#tipoEntrega16").prop("checked", true) : $("#tipoEntrega16").prop("checked", false);
-					ds.values[0].sel_tipoEntrega16.trim() != "" ? $("#tipoEntrega17").prop("checked", true) : $("#tipoEntrega17").prop("checked", false);
-					ds.values[0].sel_tipoEntrega17.trim() != "" ? $("#tipoEntrega18").prop("checked", true) : $("#tipoEntrega18").prop("checked", false);
-					ds.values[0].sel_tipoEntrega18.trim() != "" ? $("#tipoEntrega19").prop("checked", true) : $("#tipoEntrega19").prop("checked", false);
-					ds.values[0].sel_tipoEntrega19.trim() != "" ? $("#tipoEntrega20").prop("checked", true) : $("#tipoEntrega20").prop("checked", false);
+					ds.values[0].sel_tipoEntrega0 ? $("#tipoEntrega1").prop("checked", true) : $("#tipoEntrega1").prop("checked", false);
+					ds.values[0].sel_tipoEntrega1 ? $("#tipoEntrega2").prop("checked", true) : $("#tipoEntrega2").prop("checked", false);
+					ds.values[0].sel_tipoEntrega2 ? $("#tipoEntrega3").prop("checked", true) : $("#tipoEntrega3").prop("checked", false);
+					ds.values[0].sel_tipoEntrega3 ? $("#tipoEntrega4").prop("checked", true) : $("#tipoEntrega4").prop("checked", false);
+					ds.values[0].sel_tipoEntrega4 ? $("#tipoEntrega5").prop("checked", true) : $("#tipoEntrega5").prop("checked", false);
+					ds.values[0].sel_tipoEntrega5 ? $("#tipoEntrega6").prop("checked", true) : $("#tipoEntrega6").prop("checked", false);
+					ds.values[0].sel_tipoEntrega6 ? $("#tipoEntrega7").prop("checked", true) : $("#tipoEntrega7").prop("checked", false);
+					ds.values[0].sel_tipoEntrega7 ? $("#tipoEntrega8").prop("checked", true) : $("#tipoEntrega8").prop("checked", false);
+					ds.values[0].sel_tipoEntrega8 ? $("#tipoEntrega9").prop("checked", true) : $("#tipoEntrega9").prop("checked", false);
+					ds.values[0].sel_tipoEntrega9 ? $("#tipoEntrega10").prop("checked", true) : $("#tipoEntrega10").prop("checked", false);
+					ds.values[0].sel_tipoEntrega10 ? $("#tipoEntrega11").prop("checked", true) : $("#tipoEntrega11").prop("checked", false);
+					ds.values[0].sel_tipoEntrega11 ? $("#tipoEntrega12").prop("checked", true) : $("#tipoEntrega12").prop("checked", false);
+					ds.values[0].sel_tipoEntrega12 ? $("#tipoEntrega13").prop("checked", true) : $("#tipoEntrega13").prop("checked", false);
+					ds.values[0].sel_tipoEntrega13 ? $("#tipoEntrega14").prop("checked", true) : $("#tipoEntrega14").prop("checked", false);
+					ds.values[0].sel_tipoEntrega14 ? $("#tipoEntrega15").prop("checked", true) : $("#tipoEntrega15").prop("checked", false);
+					ds.values[0].sel_tipoEntrega15 ? $("#tipoEntrega16").prop("checked", true) : $("#tipoEntrega16").prop("checked", false);
+					ds.values[0].sel_tipoEntrega16 ? $("#tipoEntrega17").prop("checked", true) : $("#tipoEntrega17").prop("checked", false);
+					ds.values[0].sel_tipoEntrega17 ? $("#tipoEntrega18").prop("checked", true) : $("#tipoEntrega18").prop("checked", false);
+					ds.values[0].sel_tipoEntrega18 ? $("#tipoEntrega19").prop("checked", true) : $("#tipoEntrega19").prop("checked", false);
+					ds.values[0].sel_tipoEntrega19 ? $("#tipoEntrega20").prop("checked", true) : $("#tipoEntrega20").prop("checked", false);
 
-					ds.values[0].checkbox41opc0.trim() != "" ? $("#optPaletizado").prop("checked", true) : $("#optPaletizado").prop("checked", false);
-					ds.values[0].checkbox41opc1.trim() != "" ? $("#optFilmado").prop("checked", true) : $("#optFilmado").prop("checked", false);
-					ds.values[0].checkbox41opc2.trim() != "" ? $("#optCargaBatida").prop("checked", true) : $("#optCargaBatida").prop("checked", false);
-					ds.values[0].checkbox41opc3.trim() != "" ? $("#optDemandaAjudante").prop("checked", true) : $("#optDemandaAjudante").prop("checked", false);
-					ds.values[0].checkbox41opc4.trim() != "" ? $("#optExigeLogReversa").prop("checked", true) : $("#optExigeLogReversa").prop("checked", false);
-					ds.values[0].checkbox41opc5.trim() != "" ? $("#optDemandaContratEmpilh").prop("checked", true) : $("#optDemandaContratEmpilh").prop("checked", false)
+					ds.values[0].checkbox41opc0 ? $("#optPaletizado").prop("checked", true) : $("#optPaletizado").prop("checked", false);
+					ds.values[0].checkbox41opc1 ? $("#optFilmado").prop("checked", true) : $("#optFilmado").prop("checked", false);
+					ds.values[0].checkbox41opc2 ? $("#optCargaBatida").prop("checked", true) : $("#optCargaBatida").prop("checked", false);
+					ds.values[0].checkbox41opc3 ? $("#optDemandaAjudante").prop("checked", true) : $("#optDemandaAjudante").prop("checked", false);
+					ds.values[0].checkbox41opc4 ? $("#optExigeLogReversa").prop("checked", true) : $("#optExigeLogReversa").prop("checked", false);
+					ds.values[0].checkbox41opc5 ? $("#optDemandaContratEmpilh").prop("checked", true) : $("#optDemandaContratEmpilh").prop("checked", false)
 
 					loading.hide();
 				} else {
