@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
 	if ($("#atividade").val() != "0") {
 
 		changeCheckbox();
@@ -17,6 +18,7 @@ $(document).ready(function () {
 			}, 1000);
 		}
 	}
+
 
 	if ($('#atividade').val() == '7') {
 		if (getformMode() == "VIEW") {
@@ -56,10 +58,27 @@ $(document).ready(function () {
 
 $(function () {
 
+
+
 	if ($("#atividade").val() != "7") {
 		carregarCalendar();
 	}
 	carregarDivsRetorno();
+
+	if ($("#atividade").val() == "" || $("#atividade").val() == "0" || $("#atividade").val() == "4") {
+
+		$("input[value='Mudou'][id$='Hidden']").each(function (i) {
+
+			$(this).parent().addClass('has-warning');
+			var idCampo = (this.id).replace("Hidden", "");
+			$("#" + idCampo).addClass('corFundo');
+			var valorOriginal = $('#' + idCampo + 'Original').val();
+			const element = document.getElementById(idCampo);
+			element.title = "Valor anterior: " + valorOriginal;
+
+		})
+
+	}
 
 	if ($("#atividade").val() == "15") {
 		$("#div_enviarAtivPara").show();
@@ -67,6 +86,10 @@ $(function () {
 	}
 
 	$('#numeroFluig').change(function () {
+
+		var loading = FLUIGC.loading(window);
+
+		loading.show();
 
 		// Códigos verificando dataset
 		var con1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
@@ -167,6 +190,9 @@ $(function () {
 				$("#optExigeLogReversa").prop("checked", false);
 				$("#optDemandaContratEmpilh").prop("checked", false)
 
+
+
+
 			} else {
 				var c1 = DatasetFactory.createConstraint("solicitacao", $(this).val(), $(this).val(), ConstraintType.MUST);
 				var c2 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
@@ -189,6 +215,9 @@ $(function () {
 					$("#produtoBauminas, #produtoBauminasOriginal").val(ds.values[0].CMB_Produto);
 					$("#produtoAmbientaly, #produtoAmbientalyOriginal").val(ds.values[0].txt_ProdAmb);
 					$("#codigoProduto, #codigoProdutoOriginal").val(ds.values[0].TXT_CodProd);
+
+					$("#aditivo, #aditivoOriginal").val(ds.values[0].aditivo);
+
 					$("#qtdeLicitKg, #qtdeLicitKgOriginal").val(ds.values[0].qtdeLicitKg);
 					$("#qtdeLicitTon, #qtdeLicitTonOriginal").val(ds.values[0].qtdeLicitTon);
 					$("#qtdeLicitLitros, #qtdeLicitLitrosOriginal").val(ds.values[0].qtdeLicitLitros);
@@ -244,13 +273,15 @@ $(function () {
 					ds.values[0].sel_tipoEntrega17 ? $("#tipoEntrega18").prop("checked", true) : $("#tipoEntrega18").prop("checked", false);
 					ds.values[0].sel_tipoEntrega18 ? $("#tipoEntrega19").prop("checked", true) : $("#tipoEntrega19").prop("checked", false);
 					ds.values[0].sel_tipoEntrega19 ? $("#tipoEntrega20").prop("checked", true) : $("#tipoEntrega20").prop("checked", false);
+
 					ds.values[0].checkbox41opc0 ? $("#optPaletizado").prop("checked", true) : $("#optPaletizado").prop("checked", false);
 					ds.values[0].checkbox41opc1 ? $("#optFilmado").prop("checked", true) : $("#optFilmado").prop("checked", false);
 					ds.values[0].checkbox41opc2 ? $("#optCargaBatida").prop("checked", true) : $("#optCargaBatida").prop("checked", false);
 					ds.values[0].checkbox41opc3 ? $("#optDemandaAjudante").prop("checked", true) : $("#optDemandaAjudante").prop("checked", false);
 					ds.values[0].checkbox41opc4 ? $("#optExigeLogReversa").prop("checked", true) : $("#optExigeLogReversa").prop("checked", false);
-					ds.values[0].checkbox41opc5 ? $("#optDemandaContratEmpilh").prop("checked", true) : $("#optDemandaContratEmpilh").prop("checked", false);
+					ds.values[0].checkbox41opc5 ? $("#optDemandaContratEmpilh").prop("checked", true) : $("#optDemandaContratEmpilh").prop("checked", false)
 
+					loading.hide();
 				} else {
 
 					FLUIGC.toast({
@@ -261,6 +292,7 @@ $(function () {
 
 				}
 			}
+			loading.hide();
 			buscaHistorico();
 			verifyCheckbox();
 		} else {

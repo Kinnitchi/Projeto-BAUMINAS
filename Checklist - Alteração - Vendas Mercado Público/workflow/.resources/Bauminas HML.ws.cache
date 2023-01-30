@@ -1895,6 +1895,725 @@
    </object>
   </void>
   <void method="put">
+   <string>camposFormulario, documentoId = 263</string>
+   <array class="java.lang.String" length="238">
+    <void index="0">
+     <string>aditivo</string>
+    </void>
+    <void index="1">
+     <string>aditivoHidden</string>
+    </void>
+    <void index="2">
+     <string>aditivoOriginal</string>
+    </void>
+    <void index="3">
+     <string>ateZerarSaldo</string>
+    </void>
+    <void index="4">
+     <string>ateZerarSaldoHidden</string>
+    </void>
+    <void index="5">
+     <string>ateZerarSaldoOriginal</string>
+    </void>
+    <void index="6">
+     <string>atividade</string>
+    </void>
+    <void index="7">
+     <string>bomba</string>
+    </void>
+    <void index="8">
+     <string>bombaHidden</string>
+    </void>
+    <void index="9">
+     <string>bombaOriginal</string>
+    </void>
+    <void index="10">
+     <string>cmb_enviarAtividadeParaValida</string>
+    </void>
+    <void index="11">
+     <string>cnpj</string>
+    </void>
+    <void index="12">
+     <string>cnpjHidden</string>
+    </void>
+    <void index="13">
+     <string>cnpjOriginal</string>
+    </void>
+    <void index="14">
+     <string>codigoCliente</string>
+    </void>
+    <void index="15">
+     <string>codigoClienteHidden</string>
+    </void>
+    <void index="16">
+     <string>codigoClienteOriginal</string>
+    </void>
+    <void index="17">
+     <string>codigoProduto</string>
+    </void>
+    <void index="18">
+     <string>codigoProdutoHidden</string>
+    </void>
+    <void index="19">
+     <string>codigoProdutoOriginal</string>
+    </void>
+    <void index="20">
+     <string>condicaoPagamento</string>
+    </void>
+    <void index="21">
+     <string>condicaoPagamentoHidden</string>
+    </void>
+    <void index="22">
+     <string>condicaoPagamentoOriginal</string>
+    </void>
+    <void index="23">
+     <string>contratoAta</string>
+    </void>
+    <void index="24">
+     <string>contratoAtaHidden</string>
+    </void>
+    <void index="25">
+     <string>contratoAtaOriginal</string>
+    </void>
+    <void index="26">
+     <string>dataSolicitacao</string>
+    </void>
+    <void index="27">
+     <string>demandaEquip</string>
+    </void>
+    <void index="28">
+     <string>demandaEquipHidden</string>
+    </void>
+    <void index="29">
+     <string>demandaEquipOriginal</string>
+    </void>
+    <void index="30">
+     <string>engate</string>
+    </void>
+    <void index="31">
+     <string>engateHidden</string>
+    </void>
+    <void index="32">
+     <string>engateOriginal</string>
+    </void>
+    <void index="33">
+     <string>envioLaudosEspecificos</string>
+    </void>
+    <void index="34">
+     <string>envioLaudosEspecificosHidden</string>
+    </void>
+    <void index="35">
+     <string>envioLaudosEspecificosOriginal</string>
+    </void>
+    <void index="36">
+     <string>especificacaoProduto</string>
+    </void>
+    <void index="37">
+     <string>especificacaoProdutoHidden</string>
+    </void>
+    <void index="38">
+     <string>especificacaoProdutoOriginal</string>
+    </void>
+    <void index="39">
+     <string>especificarDias</string>
+    </void>
+    <void index="40">
+     <string>especificarDiasHidden</string>
+    </void>
+    <void index="41">
+     <string>especificarDiasOriginal</string>
+    </void>
+    <void index="42">
+     <string>especificarEquip</string>
+    </void>
+    <void index="43">
+     <string>especificarEquipHidden</string>
+    </void>
+    <void index="44">
+     <string>especificarEquipOriginal</string>
+    </void>
+    <void index="45">
+     <string>especPolegadas</string>
+    </void>
+    <void index="46">
+     <string>especPolegadasHidden</string>
+    </void>
+    <void index="47">
+     <string>especPolegadasOriginal</string>
+    </void>
+    <void index="48">
+     <string>horarioRecebimento</string>
+    </void>
+    <void index="49">
+     <string>horarioRecebimentoHidden</string>
+    </void>
+    <void index="50">
+     <string>horarioRecebimentoOriginal</string>
+    </void>
+    <void index="51">
+     <string>informacoes</string>
+    </void>
+    <void index="52">
+     <string>informacoesHidden</string>
+    </void>
+    <void index="53">
+     <string>informacoesOriginal</string>
+    </void>
+    <void index="54">
+     <string>mangote</string>
+    </void>
+    <void index="55">
+     <string>mangoteHidden</string>
+    </void>
+    <void index="56">
+     <string>mangoteOriginal</string>
+    </void>
+    <void index="57">
+     <string>numEditEmp</string>
+    </void>
+    <void index="58">
+     <string>numEditEmpHidden</string>
+    </void>
+    <void index="59">
+     <string>numEditEmpOriginal</string>
+    </void>
+    <void index="60">
+     <string>numeroFluig</string>
+    </void>
+    <void index="61">
+     <string>numeroWinner</string>
+    </void>
+    <void index="62">
+     <string>numeroWinnerHidden</string>
+    </void>
+    <void index="63">
+     <string>numeroWinnerOriginal</string>
+    </void>
+    <void index="64">
+     <string>numPedidoContrato</string>
+    </void>
+    <void index="65">
+     <string>numPedidoContratoHidden</string>
+    </void>
+    <void index="66">
+     <string>numPedidoContratoOriginal</string>
+    </void>
+    <void index="67">
+     <string>obs_enviarAtividadePara</string>
+    </void>
+    <void index="68">
+     <string>obs_enviarAtividadeParaValida</string>
+    </void>
+    <void index="69">
+     <string>obsAtendimentoClientes</string>
+    </void>
+    <void index="70">
+     <string>obsAtendimentoClientesHidden</string>
+    </void>
+    <void index="71">
+     <string>obsAtendimentoClientesOriginal</string>
+    </void>
+    <void index="72">
+     <string>obsLicitacoes</string>
+    </void>
+    <void index="73">
+     <string>obsLicitacoesHidden</string>
+    </void>
+    <void index="74">
+     <string>obsLicitacoesOriginal</string>
+    </void>
+    <void index="75">
+     <string>obsParaLogistica</string>
+    </void>
+    <void index="76">
+     <string>obsParaLogisticaHidden</string>
+    </void>
+    <void index="77">
+     <string>obsParaLogisticaOriginal</string>
+    </void>
+    <void index="78">
+     <string>optCargaBatida</string>
+    </void>
+    <void index="79">
+     <string>optCargaBatidaHidden</string>
+    </void>
+    <void index="80">
+     <string>optCargaBatidavalOri</string>
+    </void>
+    <void index="81">
+     <string>optDemandaAjudante</string>
+    </void>
+    <void index="82">
+     <string>optDemandaAjudanteHidden</string>
+    </void>
+    <void index="83">
+     <string>optDemandaAjudantevalOri</string>
+    </void>
+    <void index="84">
+     <string>optDemandaContratEmpilh</string>
+    </void>
+    <void index="85">
+     <string>optDemandaContratEmpilhHidden</string>
+    </void>
+    <void index="86">
+     <string>optDemandaContratEmpilhvalOri</string>
+    </void>
+    <void index="87">
+     <string>optExigeLogReversa</string>
+    </void>
+    <void index="88">
+     <string>optExigeLogReversaHidden</string>
+    </void>
+    <void index="89">
+     <string>optExigeLogReversavalOri</string>
+    </void>
+    <void index="90">
+     <string>optFilmado</string>
+    </void>
+    <void index="91">
+     <string>optFilmadoHidden</string>
+    </void>
+    <void index="92">
+     <string>optFilmadovalOri</string>
+    </void>
+    <void index="93">
+     <string>optPaletizado</string>
+    </void>
+    <void index="94">
+     <string>optPaletizadoHidden</string>
+    </void>
+    <void index="95">
+     <string>optPaletizadovalOri</string>
+    </void>
+    <void index="96">
+     <string>prazoEntrega</string>
+    </void>
+    <void index="97">
+     <string>prazoEntregaHidden</string>
+    </void>
+    <void index="98">
+     <string>prazoEntregaOriginal</string>
+    </void>
+    <void index="99">
+     <string>precoFinalBaseSeca</string>
+    </void>
+    <void index="100">
+     <string>precoFinalBaseSecaHidden</string>
+    </void>
+    <void index="101">
+     <string>precoFinalBaseSecaOriginal</string>
+    </void>
+    <void index="102">
+     <string>precoFinalKg</string>
+    </void>
+    <void index="103">
+     <string>precoFinalKgHidden</string>
+    </void>
+    <void index="104">
+     <string>precoFinalKgOriginal</string>
+    </void>
+    <void index="105">
+     <string>precoFinalLitros</string>
+    </void>
+    <void index="106">
+     <string>precoFinalLitrosHidden</string>
+    </void>
+    <void index="107">
+     <string>precoFinalLitrosOriginal</string>
+    </void>
+    <void index="108">
+     <string>precoFinalM3</string>
+    </void>
+    <void index="109">
+     <string>precoFinalM3Hidden</string>
+    </void>
+    <void index="110">
+     <string>precoFinalM3Original</string>
+    </void>
+    <void index="111">
+     <string>precoFinalTon</string>
+    </void>
+    <void index="112">
+     <string>precoFinalTonHidden</string>
+    </void>
+    <void index="113">
+     <string>precoFinalTonOriginal</string>
+    </void>
+    <void index="114">
+     <string>produtoAmbientaly</string>
+    </void>
+    <void index="115">
+     <string>produtoAmbientalyHidden</string>
+    </void>
+    <void index="116">
+     <string>produtoAmbientalyOriginal</string>
+    </void>
+    <void index="117">
+     <string>produtoBauminas</string>
+    </void>
+    <void index="118">
+     <string>produtoBauminasHidden</string>
+    </void>
+    <void index="119">
+     <string>produtoBauminasOriginal</string>
+    </void>
+    <void index="120">
+     <string>qtdeLicitBaseSeca</string>
+    </void>
+    <void index="121">
+     <string>qtdeLicitBaseSecaHidden</string>
+    </void>
+    <void index="122">
+     <string>qtdeLicitBaseSecaOriginal</string>
+    </void>
+    <void index="123">
+     <string>qtdeLicitKg</string>
+    </void>
+    <void index="124">
+     <string>qtdeLicitKgHidden</string>
+    </void>
+    <void index="125">
+     <string>qtdeLicitKgOriginal</string>
+    </void>
+    <void index="126">
+     <string>qtdeLicitLitros</string>
+    </void>
+    <void index="127">
+     <string>qtdeLicitLitrosHidden</string>
+    </void>
+    <void index="128">
+     <string>qtdeLicitLitrosOriginal</string>
+    </void>
+    <void index="129">
+     <string>qtdeLicitM3</string>
+    </void>
+    <void index="130">
+     <string>qtdeLicitM3Hidden</string>
+    </void>
+    <void index="131">
+     <string>qtdeLicitM3Original</string>
+    </void>
+    <void index="132">
+     <string>qtdeLicitTon</string>
+    </void>
+    <void index="133">
+     <string>qtdeLicitTonHidden</string>
+    </void>
+    <void index="134">
+     <string>qtdeLicitTonOriginal</string>
+    </void>
+    <void index="135">
+     <string>qtdeTotalBaseSeca</string>
+    </void>
+    <void index="136">
+     <string>qtdeTotalBaseSecaHidden</string>
+    </void>
+    <void index="137">
+     <string>qtdeTotalBaseSecaOriginal</string>
+    </void>
+    <void index="138">
+     <string>qtdeTotalKg</string>
+    </void>
+    <void index="139">
+     <string>qtdeTotalKgHidden</string>
+    </void>
+    <void index="140">
+     <string>qtdeTotalKgOriginal</string>
+    </void>
+    <void index="141">
+     <string>qtdeTotalLitros</string>
+    </void>
+    <void index="142">
+     <string>qtdeTotalLitrosHidden</string>
+    </void>
+    <void index="143">
+     <string>qtdeTotalLitrosOriginal</string>
+    </void>
+    <void index="144">
+     <string>qtdeTotalM3</string>
+    </void>
+    <void index="145">
+     <string>qtdeTotalM3Hidden</string>
+    </void>
+    <void index="146">
+     <string>qtdeTotalM3Original</string>
+    </void>
+    <void index="147">
+     <string>qtdeTotalTon</string>
+    </void>
+    <void index="148">
+     <string>qtdeTotalTonHidden</string>
+    </void>
+    <void index="149">
+     <string>qtdeTotalTonOriginal</string>
+    </void>
+    <void index="150">
+     <string>razaoSocial</string>
+    </void>
+    <void index="151">
+     <string>razaoSocialHidden</string>
+    </void>
+    <void index="152">
+     <string>razaoSocialOriginal</string>
+    </void>
+    <void index="153">
+     <string>seRedespacho</string>
+    </void>
+    <void index="154">
+     <string>seRedespachoHidden</string>
+    </void>
+    <void index="155">
+     <string>seRedespachoOriginal</string>
+    </void>
+    <void index="156">
+     <string>solicitacao</string>
+    </void>
+    <void index="157">
+     <string>tamanho</string>
+    </void>
+    <void index="158">
+     <string>tamanhoHidden</string>
+    </void>
+    <void index="159">
+     <string>tamanhoOriginal</string>
+    </void>
+    <void index="160">
+     <string>tipoEntrega1</string>
+    </void>
+    <void index="161">
+     <string>tipoEntrega10</string>
+    </void>
+    <void index="162">
+     <string>tipoEntrega10Hidden</string>
+    </void>
+    <void index="163">
+     <string>tipoEntrega10valOri</string>
+    </void>
+    <void index="164">
+     <string>tipoEntrega11</string>
+    </void>
+    <void index="165">
+     <string>tipoEntrega11valOri</string>
+    </void>
+    <void index="166">
+     <string>tipoEntrega11valOriHidden</string>
+    </void>
+    <void index="167">
+     <string>tipoEntrega12</string>
+    </void>
+    <void index="168">
+     <string>tipoEntrega12Hidden</string>
+    </void>
+    <void index="169">
+     <string>tipoEntrega12valOri</string>
+    </void>
+    <void index="170">
+     <string>tipoEntrega13</string>
+    </void>
+    <void index="171">
+     <string>tipoEntrega13Hidden</string>
+    </void>
+    <void index="172">
+     <string>tipoEntrega13valOri</string>
+    </void>
+    <void index="173">
+     <string>tipoEntrega14</string>
+    </void>
+    <void index="174">
+     <string>tipoEntrega14Hidden</string>
+    </void>
+    <void index="175">
+     <string>tipoEntrega14valOri</string>
+    </void>
+    <void index="176">
+     <string>tipoEntrega15</string>
+    </void>
+    <void index="177">
+     <string>tipoEntrega15Hidden</string>
+    </void>
+    <void index="178">
+     <string>tipoEntrega15valOri</string>
+    </void>
+    <void index="179">
+     <string>tipoEntrega16</string>
+    </void>
+    <void index="180">
+     <string>tipoEntrega16Hidden</string>
+    </void>
+    <void index="181">
+     <string>tipoEntrega16valOri</string>
+    </void>
+    <void index="182">
+     <string>tipoEntrega17</string>
+    </void>
+    <void index="183">
+     <string>tipoEntrega17Hidden</string>
+    </void>
+    <void index="184">
+     <string>tipoEntrega17valOri</string>
+    </void>
+    <void index="185">
+     <string>tipoEntrega18</string>
+    </void>
+    <void index="186">
+     <string>tipoEntrega18Hidden</string>
+    </void>
+    <void index="187">
+     <string>tipoEntrega18valOri</string>
+    </void>
+    <void index="188">
+     <string>tipoEntrega19</string>
+    </void>
+    <void index="189">
+     <string>tipoEntrega19Hidden</string>
+    </void>
+    <void index="190">
+     <string>tipoEntrega19valOri</string>
+    </void>
+    <void index="191">
+     <string>tipoEntrega1Hidden</string>
+    </void>
+    <void index="192">
+     <string>tipoEntrega1valOri</string>
+    </void>
+    <void index="193">
+     <string>tipoEntrega2</string>
+    </void>
+    <void index="194">
+     <string>tipoEntrega20</string>
+    </void>
+    <void index="195">
+     <string>tipoEntrega20Hidden</string>
+    </void>
+    <void index="196">
+     <string>tipoEntrega20valOri</string>
+    </void>
+    <void index="197">
+     <string>tipoEntrega2Hidden</string>
+    </void>
+    <void index="198">
+     <string>tipoEntrega2valOri</string>
+    </void>
+    <void index="199">
+     <string>tipoEntrega3</string>
+    </void>
+    <void index="200">
+     <string>tipoEntrega3Hidden</string>
+    </void>
+    <void index="201">
+     <string>tipoEntrega3valOri</string>
+    </void>
+    <void index="202">
+     <string>tipoEntrega4</string>
+    </void>
+    <void index="203">
+     <string>tipoEntrega4Hidden</string>
+    </void>
+    <void index="204">
+     <string>tipoEntrega4valOri</string>
+    </void>
+    <void index="205">
+     <string>tipoEntrega5</string>
+    </void>
+    <void index="206">
+     <string>tipoEntrega5Hidden</string>
+    </void>
+    <void index="207">
+     <string>tipoEntrega5valOri</string>
+    </void>
+    <void index="208">
+     <string>tipoEntrega6</string>
+    </void>
+    <void index="209">
+     <string>tipoEntrega6Hidden</string>
+    </void>
+    <void index="210">
+     <string>tipoEntrega6valOri</string>
+    </void>
+    <void index="211">
+     <string>tipoEntrega7</string>
+    </void>
+    <void index="212">
+     <string>tipoEntrega7Hidden</string>
+    </void>
+    <void index="213">
+     <string>tipoEntrega7valOri</string>
+    </void>
+    <void index="214">
+     <string>tipoEntrega8</string>
+    </void>
+    <void index="215">
+     <string>tipoEntrega8Hidden</string>
+    </void>
+    <void index="216">
+     <string>tipoEntrega8valOri</string>
+    </void>
+    <void index="217">
+     <string>tipoEntrega9</string>
+    </void>
+    <void index="218">
+     <string>tipoEntrega9Hidden</string>
+    </void>
+    <void index="219">
+     <string>tipoEntrega9valOri</string>
+    </void>
+    <void index="220">
+     <string>tipoFrete</string>
+    </void>
+    <void index="221">
+     <string>tipoFreteHidden</string>
+    </void>
+    <void index="222">
+     <string>tipoFreteOriginal</string>
+    </void>
+    <void index="223">
+     <string>unidadeFaturamento</string>
+    </void>
+    <void index="224">
+     <string>unidadeFaturamentoHidden</string>
+    </void>
+    <void index="225">
+     <string>unidadeFaturamentoOriginal</string>
+    </void>
+    <void index="226">
+     <string>unidadeOrigem</string>
+    </void>
+    <void index="227">
+     <string>unidadeOrigemHidden</string>
+    </void>
+    <void index="228">
+     <string>unidadeOrigemOriginal</string>
+    </void>
+    <void index="229">
+     <string>valorFrete</string>
+    </void>
+    <void index="230">
+     <string>valorFreteHidden</string>
+    </void>
+    <void index="231">
+     <string>valorFreteOriginal</string>
+    </void>
+    <void index="232">
+     <string>vigenciaContratoFim</string>
+    </void>
+    <void index="233">
+     <string>vigenciaContratoFimHidden</string>
+    </void>
+    <void index="234">
+     <string>vigenciaContratoFimOriginal</string>
+    </void>
+    <void index="235">
+     <string>vigenciaContratoIni</string>
+    </void>
+    <void index="236">
+     <string>vigenciaContratoIniHidden</string>
+    </void>
+    <void index="237">
+     <string>vigenciaContratoIniOriginal</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
    <string>expediente</string>
    <array class="java.lang.String" length="1">
     <void index="0">

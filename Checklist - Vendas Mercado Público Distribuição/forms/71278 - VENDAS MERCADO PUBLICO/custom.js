@@ -286,7 +286,7 @@ function openModal() {
 					$("#TXT_EspEquip").val(dsSolCopia.values[0].TXT_EspEquip);
 					$("#PAR_OBSAREALICT").val(dsSolCopia.values[0].PAR_OBSAREALICT);
 
-					dsSolCopia.values[0].sel_tipoEntrega0 ? $("#sel_tipoEntrega0").prop("checked", true) : $("#sel_tipoEntrega0").prop("checked", true);
+					dsSolCopia.values[0].sel_tipoEntrega0 ? $("#sel_tipoEntrega0").prop("checked", true) : $("#sel_tipoEntrega0").prop("checked", false);
 					dsSolCopia.values[0].sel_tipoEntrega1 ? $("#sel_tipoEntrega1").prop("checked", true) : $("#sel_tipoEntrega1").prop("checked", false);
 					dsSolCopia.values[0].sel_tipoEntrega2 ? $("#sel_tipoEntrega2").prop("checked", true) : $("#sel_tipoEntrega2").prop("checked", false);
 					dsSolCopia.values[0].sel_tipoEntrega3 ? $("#sel_tipoEntrega3").prop("checked", true) : $("#sel_tipoEntrega3").prop("checked", false);
@@ -306,7 +306,6 @@ function openModal() {
 					dsSolCopia.values[0].sel_tipoEntrega17 ? $("#sel_tipoEntrega17").prop("checked", true) : $("#sel_tipoEntrega17").prop("checked", false);
 					dsSolCopia.values[0].sel_tipoEntrega18 ? $("#sel_tipoEntrega18").prop("checked", true) : $("#sel_tipoEntrega18").prop("checked", false);
 					dsSolCopia.values[0].sel_tipoEntrega19 ? $("#sel_tipoEntrega19").prop("checked", true) : $("#sel_tipoEntrega19").prop("checked", false);
-
 					dsSolCopia.values[0].checkbox41opc0 ? $("#checkbox41opc0").prop("checked", true) : $("#checkbox41opc0").prop("checked", false);
 					dsSolCopia.values[0].checkbox41opc1 ? $("#checkbox41opc1").prop("checked", true) : $("#checkbox41opc1").prop("checked", false);
 					dsSolCopia.values[0].checkbox41opc2 ? $("#checkbox41opc2").prop("checked", true) : $("#checkbox41opc2").prop("checked", false);
@@ -321,16 +320,15 @@ function openModal() {
 					var dsSolCopia = DatasetFactory.getDataset("ds_form_vendas_mercado_publico", null, [c1, c2], null);
 
 					if (dsSolCopia.values.length > 0) {
+
 						$("#txt_numWinner").val(dsSolCopia.values[0].txt_numWinner);
 						$("#TXT_CodCliente").val(dsSolCopia.values[0].TXT_CodCliente);
 						$("#TXT_CNPJ").val(dsSolCopia.values[0].TXT_CNPJ);
 						$("#TXT_Cliente").val(dsSolCopia.values[0].TXT_Cliente);
 						$("#TXT_ContratoAta").val(dsSolCopia.values[0].TXT_ContratoAta);
 						$("#TXT_EditEmpenho").val(dsSolCopia.values[0].TXT_EditEmpenho);
-
 						$("#DT_ContratoDe").val(dsSolCopia.values[0].DT_ContratoDe);
 						$("#DT_ContratoAte").val(dsSolCopia.values[0].DT_ContratoAte);
-
 						$("#Rd_ZerarSd").val(dsSolCopia.values[0].Rd_ZerarSd);
 						$("#CMB_UnidFaturam").val(dsSolCopia.values[0].CMB_UnidFaturam);
 						$("#CMB_UnidOrigem").val(dsSolCopia.values[0].CMB_UnidOrigem);
@@ -358,7 +356,6 @@ function openModal() {
 						$("#precoFinalLitros").val(dsSolCopia.values[0].precoFinalLitros);
 						$("#precoFinalBaseSeca").val(dsSolCopia.values[0].precoFinalBaseSeca);
 						$("#precoFinalM3").val(dsSolCopia.values[0].precoFinalM3);
-
 						$("#TXT_CondPg").val(dsSolCopia.values[0].TXT_CondPg);
 						$("#radio35").val(dsSolCopia.values[0].radio35);
 						$("#TXT_PrazoEntreg").val(dsSolCopia.values[0].TXT_PrazoEntreg);
@@ -378,7 +375,7 @@ function openModal() {
 						$("#TXT_EspEquip").val(dsSolCopia.values[0].TXT_EspEquip);
 						$("#PAR_OBSAREALICT").val(dsSolCopia.values[0].PAR_OBSAREALICT);
 
-						dsSolCopia.values[0].sel_tipoEntrega0 ? $("#sel_tipoEntrega0").prop("checked", true) : $("#sel_tipoEntrega0").prop("checked", true);
+						dsSolCopia.values[0].sel_tipoEntrega0 ? $("#sel_tipoEntrega0").prop("checked", true) : $("#sel_tipoEntrega0").prop("checked", false);
 						dsSolCopia.values[0].sel_tipoEntrega1 ? $("#sel_tipoEntrega1").prop("checked", true) : $("#sel_tipoEntrega1").prop("checked", false);
 						dsSolCopia.values[0].sel_tipoEntrega2 ? $("#sel_tipoEntrega2").prop("checked", true) : $("#sel_tipoEntrega2").prop("checked", false);
 						dsSolCopia.values[0].sel_tipoEntrega3 ? $("#sel_tipoEntrega3").prop("checked", true) : $("#sel_tipoEntrega3").prop("checked", false);
