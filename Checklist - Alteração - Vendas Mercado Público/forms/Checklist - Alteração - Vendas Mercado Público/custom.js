@@ -357,11 +357,12 @@ const changeCheckbox = () => {
 
 		if (arr[index].checked.toString() != idOriginal) {
 
+			$(id + 'Hidden').val('Mudou');
 			$(id).parent().removeClass('custom-checkbox-primary').addClass('custom-checkbox-warning');
 			$(id).siblings()[2].setAttribute('class', 'text-warning');
 
 		} else {
-
+			$(id + 'Hidden').val('');
 			$(id).siblings()[2].classList.remove('text-warning');
 			$(id).parent().removeClass('custom-checkbox-warning').addClass('custom-checkbox-primary');
 
@@ -403,7 +404,7 @@ function buscaHistorico() {
 
 				dsHistVal += "<span><b><a target='_blank' href='https://bauminashom.fluig.com:9100/portal/p/01/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID=" + numSolici + "'>Solicitação " + numSolici + "</a></b> feita em " + dataSolic + "</span><br>";
 
-				if (getformMopde() == "VIEW") {
+				if (getformMode() == "VIEW") {
 
 					$('#conteudoHistorico').html("<span><b><a target='_blank' href='https://bauminashom.fluig.com:9100/portal/p/01/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID=" + numSolici + "'>Solicitação " + numSolici + "</a></b> feita em " + dataSolic + "</span><br>");
 				}

@@ -14,14 +14,4 @@ function displayFields(form, customHTML) {
 	}
 
 	customHTML.append("<script> function getformMode(){ return '" + formMode + "'; } </script>");
-
-	// Exibir o campo Observações caso ele não esteja vazio
-	/*
-	if(form.getValue("") != ""){
-		
-	}
-	if(form.getValue("") != ""){
-
-	}
-	*/
 }
