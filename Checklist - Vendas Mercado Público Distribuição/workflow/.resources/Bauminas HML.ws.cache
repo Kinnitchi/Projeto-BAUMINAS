@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_202" class="java.beans.XMLDecoder">
+<java version="1.8.0_361" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>volume</string>
@@ -2618,7 +2618,7 @@
   </void>
   <void method="put">
    <string>mecanismo</string>
-   <array class="[Ljava.lang.Object;" length="15">
+   <array class="[Ljava.lang.Object;" length="19">
     <void index="0">
      <array class="java.lang.Object" length="2">
       <void index="0">
@@ -2732,6 +2732,46 @@
     <void index="11">
      <array class="java.lang.Object" length="2">
       <void index="0">
+       <string>MOC_informa_parecer</string>
+      </void>
+      <void index="1">
+       <string>MOC_informa_parecer</string>
+      </void>
+     </array>
+    </void>
+    <void index="12">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>MOC_informa_parecera</string>
+      </void>
+      <void index="1">
+       <string>MOC_informa_parecera</string>
+      </void>
+     </array>
+    </void>
+    <void index="13">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>MOC_interessados</string>
+      </void>
+      <void index="1">
+       <string>MOC_interessados</string>
+      </void>
+     </array>
+    </void>
+    <void index="14">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>MOC_mec_inicial</string>
+      </void>
+      <void index="1">
+       <string>MOC_mec_inicial</string>
+      </void>
+     </array>
+    </void>
+    <void index="15">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
        <string>Atribuição por Papel</string>
       </void>
       <void index="1">
@@ -2739,7 +2779,7 @@
       </void>
      </array>
     </void>
-    <void index="12">
+    <void index="16">
      <array class="java.lang.Object" length="2">
       <void index="0">
        <string>Atribuição para um Grupo</string>
@@ -2749,7 +2789,7 @@
       </void>
      </array>
     </void>
-    <void index="13">
+    <void index="17">
      <array class="java.lang.Object" length="2">
       <void index="0">
        <string>Atribuição para um Papel</string>
@@ -2759,7 +2799,7 @@
       </void>
      </array>
     </void>
-    <void index="14">
+    <void index="18">
      <array class="java.lang.Object" length="2">
       <void index="0">
        <string>Atribuição por Usuário</string>

@@ -1,0 +1,236 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+	<link type="text/css" rel="stylesheet" href="style.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script src="/style-guide/js/fluig-style-guide-richeditor.min.js"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js" charset="utf-8"></script>
+	<script src="custom.js"></script>
+	<script src="tools.js"></script>
+</head>
+<style>
+	.fluig-style-guide.modal-backdrop {
+		background-color: rgb(203 203 203 / 26%) !important;
+	}
+</style>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class="row">
+				<div class="col-md-9 form-group">
+					<label>Requisitante</label>
+					<input type="text" class="form-control" name="requisicao_usuario" id="requisicao_usuario">
+				</div>
+				<div class="col-md-3 form-group">
+					<label>Data requisição</label>
+					<input type="text" class="form-control" name="requisicao_data" id="requisicao_data">
+				</div>
+			</div>
+			<div id="tabs">
+
+				<ul class="nav nav-tabs clearfix" role="tablist">
+					<li><a href="#aba_requisicao">Requisição</a></li>
+					<li style="display:none"><a href="#aba_autorizado">Autorizado</a></li>
+					<li><a href="#aba_consultados">Consultados</a></li>
+					<li><a href="#aba_informados">Informados</a></li>
+					<li><a href="#aba_aprovacao">Aprovação</a></li>
+				</ul>
+
+				<div class="tab-content" id="aba_requisicao">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Evento</label>
+								<input type="zoom" class="form-control" name="evento" id="evento" data-zoom="{
+									        'displayKey':'evento',
+									        'datasetId':'DSCadastrodaMatrizRACI',
+									        'placeholder':'Escolha o evento',
+									        'fields':[
+									            {
+									               'field':'evento',
+									               'label':'Evento'
+									            },{
+									              'field':'documentId',
+									              'label':'docId',
+									              'visible':'false'
+									            }
+									        ]
+									     }">
+								<input type="hidden" name="docId" id="docId">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Detalhamento requisição</label>
+								<textarea class="form-control" rows="10" name="requisicao_detalhe"
+									id="requisicao_detalhe"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="aba_autorizado">
+					<button id="addAutoridade">Adiciona Autoridade</button>
+					<table tablename="tableAutoridades" class="table table-striped" noaddbutton="true">
+						<thead>
+							<tr>
+								<th>Autoridade</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="hidden" name="autoridade_codusuario" id="autoridade_codusuario">
+									<input type="zoom" name="autoridade_usuario" id="autoridade_usuario" data-zoom="{
+									        'displayKey':'colleagueName',
+									        'datasetId':'dsMOC_MatrizRACI',
+									        'placeholder':'Escolha a autoridade',
+									        'fields':[
+									            {
+									               'field':'colleagueId',
+									               'label':'ID',
+									               'visible':'false'
+									            },{
+									              'field':'colleagueName',
+									              'label':'Nome'
+									            }
+									        ]
+									     }">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tab-content" id="aba_consultados">
+					<div id="divBtnConsultados">
+						<button id="addConsultado">Adiciona Consultado</button>
+					</div>
+					<table tablename="tableConsultados" class="table table-striped" noaddbutton="true">
+						<thead>
+							<tr>
+								<th>Consultado</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="hidden" name="consultado_codusuario" id="consultado_codusuario">
+									<input type="zoom" name="consultado_usuario" id="consultado_usuario" data-zoom="{
+									        'displayKey':'colleagueName',
+									        'datasetId':'dsMOC_MatrizRACI',
+									        'placeholder':'Escolha o consultado',
+									        'fields':[
+									            {
+									               'field':'colleagueId',
+									               'label':'ID',
+									               'visible':'false'
+									            },{
+									              'field':'colleagueName',
+									              'label':'Nome'
+									            }
+									        ]
+									     }">
+									<textarea class="hidden" name="consultado_comentarios"
+										id="consultado_comentarios"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tab-content" id="aba_informados">
+					<div id="divBtnInformado">
+						<button id="addInformado">Adiciona Informado</button>
+					</div>
+					<table tablename="tableInformados" class="table table-striped" noaddbutton="true">
+						<thead>
+							<tr>
+								<th>Informado</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="hidden" name="informado_codusuario" id="informado_codusuario">
+									<input type="zoom" name="informado_usuario" id="informado_usuario" data-zoom="{
+									        'displayKey':'colleagueName',
+									        'datasetId':'dsMOC_MatrizRACI',
+									        'placeholder':'Escolha o informado',
+									        'fields':[
+									            {
+									               'field':'colleagueId',
+									               'label':'ID',
+									               'visible':'false'
+									            },{
+									              'field':'colleagueName',
+									              'label':'Nome'
+									            }
+									        ]
+									     }">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tab-content" id="aba_aprovacao">
+					<!-- <button id="addAutoridade">Adiciona Autoridade</button> -->
+					<div class="table-responsive">
+						<table tablename="tableAprovacoes" class="table table-striped" noaddbutton="true">
+							<thead class="fs-display-none">
+								<tr>
+									<th>Aprovação</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="row form-group">
+											<div class="col-sm-3">
+												<input type="hidden" class="form-control" name="userCode" id="userCode">
+												<input type="text" class="form-control" name="usuario" id="usuario">
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="dataAprovacao" id="dataAprovacao">
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="valorAprovacao" id="valorAprovacao">
+											</div>
+										</div>
+
+										<div class="row form-group">
+											<div class="col-sm-12">
+												<textarea class="form-control" name="comentarios" id="comentarios"></textarea>
+											</div>
+										</div>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<div class="col-md-12">
+						<button class="btn btn-default btn-md" id="btnAprrove" name="btnAprrove"
+							onclick="tools.adicionaResponsavel()">
+							Aprovação
+						</button>
+					</div>
+				</div>
+
+
+
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
