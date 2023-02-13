@@ -112,7 +112,7 @@ $(function () {
 		// Códigos verificando dataset
 		var con1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
 		var con2 = DatasetFactory.createConstraint("numeroFluig", $("#numeroFluig").val(), $("#numeroFluig").val(), ConstraintType.MUST);
-		var dsVerifi = DatasetFactory.getDataset("DSFormulariodeChecklist-Alteracao-VendasMercadoPublico", null, [con1, con2], null);
+		var dsVerifi = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico", null, [con1, con2], null);
 		var repetiu = false;
 
 		$('#UltimaSolicitacao').html('');
@@ -138,7 +138,7 @@ $(function () {
 		if (!repetiu) {
 
 			const ds2 = DatasetFactory.getDataset(
-				'DSFormulariodeChecklist-Alteracao-VendasMercadoPublico',
+				'dsChecklistAlteracaoVendasMercadoPublico',
 				null,
 				[
 					DatasetFactory.createConstraint("solicitacao", numprocess, numprocess, ConstraintType.MUST),
@@ -164,7 +164,7 @@ $(function () {
 
 				const dsValues = new Array();
 
-				const alteracaoNumFluig = DatasetFactory.getDataset("DSFormulariodeChecklist-Alteracao-VendasMercadoPublico",
+				const alteracaoNumFluig = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico",
 					["solicitacao"],
 					[
 						DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST),
@@ -172,7 +172,7 @@ $(function () {
 					],
 					null);
 
-				const alteracaoOldFluig = DatasetFactory.getDataset("DSFormulariodeChecklist-Alteracao-VendasMercadoPublico",
+				const alteracaoOldFluig = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico",
 					["solicitacao"],
 					[
 						DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST),
@@ -316,7 +316,7 @@ $(function () {
 
 				let c3 = DatasetFactory.createConstraint("solicitacao", numprocess, numprocess, ConstraintType.MUST);
 				let c4 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
-				let ds = DatasetFactory.getDataset("ds_form_vendas_mercado_publico", null, [c3, c4], null);
+				let ds = DatasetFactory.getDataset("dsVendasMercadoPublico", null, [c3, c4], null);
 
 				if (ds.values.length > 0) {
 
@@ -558,7 +558,7 @@ function buscaHistorico(processId) {
 
 	var cn1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
 	var cn2 = DatasetFactory.createConstraint("numeroFluig", processId, processId, ConstraintType.MUST);
-	var dsHist1 = DatasetFactory.getDataset("DSFormulariodeChecklist-Alteracao-VendasMercadoPublico", ["dataSolicitacao"], [cn1, cn2], null);
+	var dsHist1 = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico", ["dataSolicitacao"], [cn1, cn2], null);
 
 	if (dsHist1.values.length == 0) {
 
@@ -573,12 +573,12 @@ function buscaHistorico(processId) {
 		// Hitorico para solicitações de alteração
 		var cs1 = DatasetFactory.createConstraint("solicitacao", processId, processId, ConstraintType.MUST);
 		var cs2 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
-		var vendasDs = DatasetFactory.getDataset("ds_form_vendas_mercado_publico", ["dataSolicitacao"], [cs1, cs2], null);
+		var vendasDs = DatasetFactory.getDataset("dsVendasMercadoPublico", ["dataSolicitacao"], [cs1, cs2], null);
 
 		if (vendasDs.values.length > 0) {
 
 			var dsValues = new Array();
-			const alteracaoNumFluig = DatasetFactory.getDataset("DSFormulariodeChecklist-Alteracao-VendasMercadoPublico",
+			const alteracaoNumFluig = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico",
 				["solicitacao", "dataSolicitacao"],
 				[
 					DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST),
@@ -586,7 +586,7 @@ function buscaHistorico(processId) {
 				],
 				null);
 
-			const alteracaoOldFluig = DatasetFactory.getDataset("DSFormulariodeChecklist-Alteracao-VendasMercadoPublico",
+			const alteracaoOldFluig = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico",
 				["solicitacao", "dataSolicitacao"],
 				[
 					DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST),
@@ -636,7 +636,7 @@ function buscaHistorico(processId) {
 
 			var cs1 = DatasetFactory.createConstraint("solicitacao", numSolicOrigem, numSolicOrigem, ConstraintType.MUST);
 			var cs2 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
-			var dsVendas = DatasetFactory.getDataset("ds_form_vendas_mercado_publico", ["dataSolicitacao"], [cs1, cs2], null);
+			var dsVendas = DatasetFactory.getDataset("dsVendasMercadoPublico", ["dataSolicitacao"], [cs1, cs2], null);
 
 			var dsHistVal = "<span><u><b><a target='_blank' href='https://bauminashom.fluig.com:9100/portal/p/01/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID=" + numSolicOrigem + "'>Solicitação principal " + numSolicOrigem + "</a></b> feita em " + dsVendas.values[0]["dataSolicitacao"] + "</u></span><br>";
 

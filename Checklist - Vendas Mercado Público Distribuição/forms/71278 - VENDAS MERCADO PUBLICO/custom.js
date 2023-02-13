@@ -345,7 +345,7 @@ function openModal() {
 
 					var c1 = DatasetFactory.createConstraint("solicitacao", idSolic, idSolic, ConstraintType.MUST);
 					var c2 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
-					var dsSolCopia = DatasetFactory.getDataset("ds_form_vendas_mercado_publico", null, [c1, c2], null);
+					var dsSolCopia = DatasetFactory.getDataset("dsVendasMercadoPublico", null, [c1, c2], null);
 
 					if (dsSolCopia.values.length > 0) {
 
@@ -443,7 +443,7 @@ function openModal() {
 				} else {
 
 					var dsAlteracao = DatasetFactory.getDataset(
-						"DSFormulariodeChecklist-Alteracao-VendasMercadoPublico",
+						"dsChecklistAlteracaoVendasMercadoPublico",
 						null,
 						[
 							DatasetFactory.createConstraint("solicitacao", idSolic, idSolic, ConstraintType.MUST),
@@ -597,7 +597,7 @@ function carregarCalendar() {
 const historyProcess = (processId) => {
 
 	var dataset = new Array();
-	const alteracaoNumFluig = DatasetFactory.getDataset("DSFormulariodeChecklist-Alteracao-VendasMercadoPublico",
+	const alteracaoNumFluig = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico",
 		["solicitacao", "dataSolicitacao"],
 		[
 			DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST),
@@ -605,7 +605,7 @@ const historyProcess = (processId) => {
 		],
 		null);
 
-	const alteracaoOldFluig = DatasetFactory.getDataset("DSFormulariodeChecklist-Alteracao-VendasMercadoPublico",
+	const alteracaoOldFluig = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico",
 		["solicitacao", "dataSolicitacao"],
 		[
 			DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST),
