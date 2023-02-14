@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="374" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="531" key="dialogHeight"/>
+		<item value="533" key="dialogHeight"/>
 		<item value="1025" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
@@ -20,7 +24,7 @@
 	</section>
 	<section name="ImportExportAction">
 		<item value="com.totvs.tds.ecm.designer.eclipse.ui.BPMExportManager" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
-		<item value="com.totvs.tds.ecm.designer.eclipse.ui.ImportProcessGeneralWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="com.totvs.tds.ecm.designer.eclipse.ui.ImportDatasetWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="com.totvs.tds.ecm.category.bpm.importWizard"/>
 		</list>

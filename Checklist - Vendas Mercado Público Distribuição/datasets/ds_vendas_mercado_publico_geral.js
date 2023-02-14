@@ -113,7 +113,7 @@ function createDataset(fields, constraints, sortFields) {
 
     arrConstra.push(DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST));
 
-    var ds2 = DatasetFactory.getDataset("dsVendasMercadoPublico", null, arrConstra, null);
+    var ds2 = DatasetFactory.getDataset("ds_form_vendas_mercado_publico", null, arrConstra, null);
 
     for (var j = 0; j < ds2.rowsCount; j++) {
 
@@ -154,7 +154,7 @@ function createDataset(fields, constraints, sortFields) {
 
     arrConstrai.push(DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST));
 
-    var ds3 = DatasetFactory.getDataset("dsChecklistAlteracaoVendasMercadoPublico", null, arrConstrai, null);
+    var ds3 = DatasetFactory.getDataset("ds_form_vendas_mercado_publico", null, arrConstrai, null);
 
     for (var j = 0; j < ds3.rowsCount; j++) {
 

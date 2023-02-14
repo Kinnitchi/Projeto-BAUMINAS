@@ -2549,6 +2549,19 @@
     <void method="add">
      <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
       <void property="datasetName">
+       <string>ds_form_vendas_mercado_publico</string>
+      </void>
+      <void property="documentDescription">
+       <string>VENDAS MERCADO PUBLICO</string>
+      </void>
+      <void property="documentId">
+       <int>71278</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
        <string>ds_grpBAUMINAS</string>
       </void>
       <void property="documentDescription">
@@ -2569,6 +2582,19 @@
       </void>
       <void property="documentId">
        <int>85576</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>dsChecklistAlteracaoVendasMercadoPublico</string>
+      </void>
+      <void property="documentDescription">
+       <string>Checklist - Alteração Vendas Mercado Publico</string>
+      </void>
+      <void property="documentId">
+       <int>85582</int>
       </void>
      </object>
     </void>
@@ -4545,19 +4571,6 @@
       </void>
       <void property="documentId">
        <int>68781</int>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
-      <void property="datasetName">
-       <string>ds_form_vendas_mercado_publico</string>
-      </void>
-      <void property="documentDescription">
-       <string>VENDAS MERCADO PUBLICO</string>
-      </void>
-      <void property="documentId">
-       <int>71278</int>
       </void>
      </object>
     </void>

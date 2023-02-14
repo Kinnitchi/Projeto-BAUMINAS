@@ -28,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Checklist - Vendas Mercado Público BAUMINAS Águas</processId>
-      <version>59</version>
+      <version>66</version>
     </processDefinitionVersionPK>
     <versionDescription>Nova Versão.</versionDescription>
-    <formId>85576</formId>
+    <formId>71278</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>true</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -1052,7 +1052,7 @@
         <companyId>1</companyId>
         <processId>AC_0004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>59</version>
+        <version>66</version>
         <sequence>44</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1066,7 +1066,7 @@
         <companyId>1</companyId>
         <processId>AC_0004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>59</version>
+        <version>66</version>
         <sequence>55</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;cmb_enviarAtividadeParaValida&quot;)==&quot;1&quot;</condition>
@@ -1078,7 +1078,7 @@
         <companyId>1</companyId>
         <processId>AC_0004</processId>
         <expressionOrder>2</expressionOrder>
-        <version>59</version>
+        <version>66</version>
         <sequence>55</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;cmb_enviarAtividadeParaValida&quot;)==&quot;2&quot;</condition>
@@ -1090,7 +1090,7 @@
         <companyId>1</companyId>
         <processId>AC_0004</processId>
         <expressionOrder>3</expressionOrder>
-        <version>59</version>
+        <version>66</version>
         <sequence>55</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;cmb_enviarAtividadeParaValida&quot;)==&quot;3&quot;</condition>
@@ -1104,7 +1104,7 @@
         <companyId>1</companyId>
         <processId>AC_0004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>59</version>
+        <version>66</version>
         <sequence>66</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1118,7 +1118,7 @@
         <companyId>1</companyId>
         <processId>AC_0004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>59</version>
+        <version>66</version>
         <sequence>69</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1132,7 +1132,7 @@
         <companyId>1</companyId>
         <processId>AC_0004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>59</version>
+        <version>66</version>
         <sequence>72</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1749,7 +1749,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AC_0004</processId>
-        <version>59</version>
+        <version>66</version>
         <linkSequence>62</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1760,7 +1760,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AC_0004</processId>
-        <version>59</version>
+        <version>66</version>
         <linkSequence>63</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1771,7 +1771,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AC_0004</processId>
-        <version>59</version>
+        <version>66</version>
         <linkSequence>64</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1782,7 +1782,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>AC_0004</processId>
-        <version>59</version>
+        <version>66</version>
         <linkSequence>65</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

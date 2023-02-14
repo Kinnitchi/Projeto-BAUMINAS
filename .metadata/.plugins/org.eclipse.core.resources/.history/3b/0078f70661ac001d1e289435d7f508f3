@@ -1,0 +1,32 @@
+form-control[disabled] {
+   border-color: #d1d3d4;
+}
+
+.corFundo {
+   color: gray !important;
+   background-color: lightgray !important;
+   border-bottom: 2px solid #f0ad4e !important;
+}
+
+
+
+:disabled {
+   color: gray !important;
+   background-color: lightgray !important;
+   /* border: none !important; */
+   border-color: transparent !important;
+   border-bottom: 2px solid #f0ad4e !important;
+}
+
+#iconeCalendario {
+   color: rgb(85, 85, 85) !important;
+}
+
+#fundoCalendario,
+#fundoCalendario2 {
+   background-color: rgb(238, 238, 238) !important;
+}
+
+.text-warning {
+   color: #f0ad4e !important;
+}
