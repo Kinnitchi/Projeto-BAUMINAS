@@ -1,0 +1,17 @@
+.ui-tabs-active {
+	border-bottom: 2px solid #000000 !important;
+}
+
+input:disabled,
+input:read-only {
+	background-color: #f7f7f7;
+	color: lightgray;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+	width: 100% !important;
+}
+
+[name="form"] {
+	overflow-x: hidden;
+}

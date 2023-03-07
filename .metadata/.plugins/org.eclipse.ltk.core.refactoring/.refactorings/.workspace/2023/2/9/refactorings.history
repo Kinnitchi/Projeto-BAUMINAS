@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Devolução de venda (PROD) - BKP&apos; to &apos;Devolução de venda (PROD) - Alterado&apos;" description="Rename resource &apos;Devolução de venda (PROD) - BKP&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Devolução de venda (PROD) - BKP" name="Devolução de venda (PROD) - Alterado" stamp="1677610482583" updateReferences="true"/>
+</session>

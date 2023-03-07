@@ -1,0 +1,49 @@
+.btn-success {
+   background: #107c41 !important;
+   color: #ffffff !important;
+}
+
+.rigth {
+   text-align: right !important;
+}
+
+.left {
+   text-align: left !important;
+}
+
+.center {
+   text-align: center !important;
+}
+
+table tbody tr td:last-child {
+   text-transform: capitalize;
+   white-space: nowrap;
+}
+
+.panel-title {
+   font-size: 25px !important;
+}
+
+.paginate_button {
+   font-size: 14px;
+   font-weight: 700;
+   line-height: 1.42857143;
+   display: inline-block;
+   margin-bottom: 0;
+   padding: 5px 13px;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   text-align: center;
+   vertical-align: middle;
+   white-space: nowrap;
+   border: 1px solid transparent;
+   border-radius: 4px;
+   background-image: none;
+   touch-action: manipulation;
+   color: #58595b;
+   border-color: #58595b;
+   background-color: #fff;
+}

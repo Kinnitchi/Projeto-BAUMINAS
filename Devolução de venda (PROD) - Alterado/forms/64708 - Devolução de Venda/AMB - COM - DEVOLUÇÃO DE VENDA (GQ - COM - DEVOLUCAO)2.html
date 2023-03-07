@@ -1,0 +1,612 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="custom.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="principal" class="fluig-style-guide">
+		<form name="form" role="form">
+
+			<!-- TÍTULO -->
+			<div class="row">
+				<div class="page-header col-xs-12">
+					<h1 id="tituloForm" class="text-center">Devolução de Venda</h1>
+				</div>
+			</div>
+
+			<!-- NAVBAR -->
+			<div class="row">
+				<div id="navbar" class="col-xs-12">
+					<ul class="nav nav-pills" role="tablist">
+						<li class="nav-item active">
+							<a href="#div_solicitante" role="tab" data-toggle="pill">Solicitante</a>
+						</li>
+						<li id="divAbaIndustrial" class="nav-item">
+							<a href="#div_industrial" role="tab" data-toggle="pill">Industrial</a>
+						</li>
+						<li id="divAbaCustos1" class="nav-item">
+							<a href="#div_custos1" role="tab" data-toggle="pill">Custos</a>
+						</li>
+						<li id="divAbaLogistica" class="nav-item">
+							<a href="#div_logistica" role="tab" data-toggle="pill">Logística</a>
+						</li>
+						<li id="divAbaFiscal" class="nav-item">
+							<a href="#div_fiscal" role="tab" data-toggle="pill">Fiscal</a>
+						</li>
+						<li id="divAbaFaturamento" class="nav-item">
+							<a href="#div_faturamento" role="tab" data-toggle="pill">Faturamento</a>
+						</li>
+						<li id="divAbaFinanceiro" class="nav-item">
+							<a href="#div_financeiro" role="tab" data-toggle="pill">Financeiro</a>
+						</li>
+						<li id="divAbaCustos" class="nav-item">
+							<a href="#div_custos" role="tab" data-toggle="pill">Custos</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="tab-content">
+				<!-- TAB SOLICITANTE -->
+				<div id="div_solicitante" class="tab-pane fade in active">
+					<!-- DADOS SOLICITANTE -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Dados do Solicitante</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+
+
+								<div class="form-group col-xs-12 col-sm-4" id="div_setor">
+									<input type="hidden" name="codigoSetor" id="codigoSetor">
+									<label for="setor">Setor*: </label>
+									<input type="zoom" id="setor" name="setor" data-zoom="{
+											'displayKey':'descricaoSetores',
+											'datasetId':'DScadastroSetores',
+											'fields':[
+												{
+												'field':'id',
+												'label':'ID'
+												},{
+												'field':'descricaoSetores',
+												'label':'Setor',
+												'standard':'true'
+												}
+											]
+										}" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="tipoSolicitacao">Tipo de Solicitação*:</label>
+									<select name="tipoSolicitacao" id="tipoSolicitacao" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="1" class="form-control">Devolução de Venda com Recusa</option>
+										<option value="2" class="form-control">Devolução de Venda C/ NF Emitida pelo
+											Cliente</option>
+									</select>
+								</div>
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="nomeSolicitante">Nome:</label>
+									<input type="text" class="form-control" name="nomeSolicitante" id="nomeSolicitante">
+								</div>
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="dataSolicitante">Data:</label>
+									<input type="text" id="dataSolicitante" class="form-control" name="dataSolicitante"
+										mask="00/00/0000">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- DADOS DA RNC -->
+					<div class="panel panel-default" id="div_dadosRNC">
+						<div class="panel-heading">
+							<h3 class="panel-title">Dados da RNC</h3>
+						</div>
+						<div class="panel-body">
+
+							<div class="form-group col-xs-12" id="divObsRNC">
+								<p id="obsRNC" class="text-center">Obs: É obrigatória a abertura prévia de RNC relativa ao
+									evento</p>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="numRNC">N&deg; RNC*:</label>
+									<input type="text" id="numRNC" name="numRNC" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- DADOS DA NOTA FISCAL -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Dados da Nota Fiscal</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<h3 class="text-center text-danger">É obrigatório anexar a Nota Fiscal</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="numNF">N&deg; da NF*:</label>
+									<input type="text" id="numNF" name="numNF" class="form-control">
+								</div>
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="dataEmissao">Data da Emissão*:</label>
+									<input type="text" id="dataEmissao" name="dataEmissao" class="form-control"
+										mask="00/00/0000">
+								</div>
+								<div class="form-group col-xs-12 col-sm-4">
+									<input type="hidden" name="codigoUnidade" id="codigoUnidade">
+									<label for="estabelecimento">Unidade de Emissão da NF*: </label><br>
+									<input type="zoom" id="estabelecimento" name="estabelecimento" data-zoom="{
+											'displayKey':'descricaoUnidades',
+											'datasetId':'DScadastroUnidades',
+											'fields':[
+												{
+												'field':'codigo',
+												'label':'Código'
+												},{
+												'field':'descricaoUnidades',
+												'label':'Estabelecimento',
+												'standard':'true'
+												},{
+												'field':'id',
+												'label':'Id',
+												'visible':'false'
+												}
+											]
+										}" />
+								</div>
+							</div>
+							<!--
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="codigoCliente">Código do Cliente:</label>
+									<input type="text" id="codigoCliente" name="codigoCliente" class="form-control">
+								</div>
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="nomeCliente">Nome do Cliente:</label>
+									<input type="text" id="nomeCliente" name="nomeCliente" class="form-control">
+								</div>
+							</div>
+							-->
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="cliente">Cliente*:</label>
+									<!-- codigoEstabelecimento -->
+									<input type="zoom" id="cliente" name="cliente" data-zoom="{
+											'displayKey':'DISPLAY',
+											'datasetId':'ds_protheus_consulta_sa1',
+											'fields':[
+												{
+													'field':'A1_COD',
+													'label':'Código',
+													'standard':'true'
+												},{
+													'field':'A1_LOJA',
+													'label':'Loja',
+													'visible':'false'
+												},{
+													'field':'A1_NOME',
+													'label':'Nome'
+												},{
+													'field':'A1_MUN',
+													'label':'Loja do Cliente',
+													'visible':'false'
+												}
+											]
+										}" />
+
+								</div>
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="nfTransitou">NF Transitou?*</label>
+									<select name="nfTransitou" id="nfTransitou" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não</option>
+									</select>
+								</div>
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="seraRefaturada">Será Refaturada?*</label>
+									<select name="seraRefaturada" id="seraRefaturada" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+
+								<div class="form-group col-xs-12 col-sm-6" id="div_cfop">
+									<label for="cfop">CFOP*:</label>
+									<input type="zoom" id="cfop" name="cfop" data-zoom="{
+											'displayKey':'DISPLAY',
+											'datasetId':'ds_protheus_consulta_c0y',
+											'fields':[
+												{
+												'field':'C0Y_CODIGO',
+												'label':'Código',
+												'standard':'true'
+												},{
+													'field':'C0Y_DESCRI',
+													'label':'Nome'
+												}
+											]
+										}" />
+								</div>
+
+								<div class="form-group col-xs-12 col-sm-6" id="div_codigoItem">
+									<label for="codigoItem">Código do Item*:</label>
+									<input type="text" class="form-control" name="codigoItem" id="codigoItem">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label for="motivo">Motivo*:</label>
+									<br>
+									<label for="motivo" id="txtMotivo">Explique detalhadamente</label>
+									<textarea class="form-control" name="motivo" id="motivo" rows="5"
+										style="resize: none;"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- DADOS DO TRANSPORTE -->
+					<div class="panel panel-default" id="div_dadosTransporte">
+						<div class="panel-heading">
+							<h3 class="panel-title">Dados do Transporte</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="nomeTransportadora">Nome da Transportadora*:</label>
+									<input type="text" id="nomeTransportadora" name="nomeTransportadora" class="form-control">
+								</div>
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="placaVeiculo">Placa do Veículo*:</label>
+									<input type="text" mask="SSS 0000" name="placaVeiculo" id="placaVeiculo"
+										class="form-control">
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="frete">Frete*:</label>
+									<select name="frete" id="frete" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="CIF" class="form-control">CIF</option>
+										<option value="FOB" class="form-control">FOB</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- TIPO DE DEVOLUÇÃO -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Tipo de Devolução</h3>
+						</div>
+						<div class="panel-body">
+							<br>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label>Tipo de Devolução*:</label><br>
+									<div class="custom-radio custom-radio-inline custom-radio-primary">
+										<input type="radio" name="tipoDevolucao" value="fisica" id="tipoFisica">
+										<label for="tipoFisica">Física</label>
+									</div>
+									<div class="custom-radio custom-radio-inline custom-radio-primary">
+										<input type="radio" name="tipoDevolucao" value="contabil" id="tipoContabil">
+										<label for="tipoContabil">Contábil</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label>Informação Física*:</label><br>
+									<div class="custom-radio custom-radio-inline custom-radio-primary">
+										<input type="radio" name="informacaoFisica" value="total" id="devolucaoTotal">
+										<label for="devolucaoTotal">Devolução Total</label>
+									</div>
+									<div class="custom-radio custom-radio-inline custom-radio-primary">
+										<input type="radio" name="informacaoFisica" value="parcial" id="devolucaoParcial">
+										<label for="devolucaoParcial">Devolução Parcial</label>
+									</div>
+								</div>
+							</div>
+							<!--div class="row">
+								<div class="form-group col-xs-12">
+									<label>Informação Fiscal*:</label><br>
+									<div class="custom-radio custom-radio-inline custom-radio-primary">
+										<input type="radio" name="informacaoFiscal" value="emitida" id="NFemitida">
+										<label for="NFemitida">Nota Fiscal emitida pelo cliente</label>
+									</div>
+									<div class="custom-radio custom-radio-inline custom-radio-primary">
+										<input type="radio" name="informacaoFiscal" value="recusa" id="NFrecusa">
+										<label for="NFrecusa">Recusa na Nota Fiscal de venda</label>
+									</div>
+									<input type="hidden" name="codSolicitacao" id="codSolicitacao">
+								</div>
+							</div-->
+						</div>
+					</div>
+					<!-- OBSERVAÇÃO -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Observação</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label for="obsSolicitante">Observação:</label>
+									<textarea class="form-control" name="obsSolicitante" id="obsSolicitante" rows="5"
+										style="resize: none;" style="resize: none;"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="div_industrial" class="tab-pane fade">
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Industrial</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row form-group">
+								<div class="col-xs-12 col-sm-6">
+									<label for="industriaApprove">Aprovado*:</label>
+									<select name="industriaApprove" id="industriaApprove" class="form-control">
+										<option value="" selected disabled>Selecione</option>
+										<option value="S">Sim</option>
+										<option value="solicitante">Voltar para Solicitante</option>
+									</select>
+								</div>
+							</div>
+							<div class="row form-group">
+								<div class="col-xs-12">
+									<label for="obsIndustria">Observação:</label>
+									<textarea class="form-control fs-no-resize" name="obsIndustria" id="obsIndustria"
+										rows="5"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- TAB CUSTOS1 -->
+				<div id="div_custos1" class="tab-pane fade">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Custos</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="custos1Aprovado">Aprovado*:</label>
+									<select name="custos1Aprovado" id="custos1Aprovado" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="solicitante" class="form-control">Voltar para Solicitante</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label for="obsCustos1">Observação:</label>
+									<textarea class="form-control" name="obsCustos1" id="obsCustos1" rows="5"
+										style="resize: none;"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="div_logistica" class="tab-pane fade">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Logística</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="logisticaAprovado">Aprovado*:</label>
+									<select name="logisticaAprovado" id="logisticaAprovado" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não (Encerrar Solicitação)</option>
+										<option value="anterior" class="form-control">Voltar para Atividade Anterior</option>
+										<option value="solicitante" class="form-control">Voltar para Solicitante</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label for="obsLogistica">Observação:</label>
+									<textarea class="form-control" name="obsLogistica" id="obsLogistica" rows="5"
+										style="resize: none;"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- TAB FISCAL -->
+				<div id="div_fiscal" class="tab-pane fade">
+					<!-- FISCAL - ORIENTAÇÃO E VALIDAÇÃO -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Fiscal - Orientação e Validação</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="fiscalAprovado">Aprovado*:</label>
+									<select name="fiscalAprovado" id="fiscalAprovado" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não (Encerrar Solicitação)</option>
+										<option value="anterior" class="form-control">Voltar para Atividade Anterior</option>
+										<option value="solicitante" class="form-control">Voltar para Solicitante</option>
+									</select>
+								</div>
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="naturezaOperacao">Natureza da Operação:</label>
+									<input type="text" id="naturezaOperacao" name="naturezaOperacao" class="form-control">
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="nfDevolucaoConforme">NF de Devolução/Recusa está Conforme?</label>
+									<select name="nfDevolucaoConforme" id="nfDevolucaoConforme" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não</option>
+									</select>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label for="obsFiscal">Observação:</label>
+									<textarea class="form-control" name="obsFiscal" id="obsFiscal" rows="5"
+										style="resize: none;"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TAB FATURAMENTO -->
+				<div id="div_faturamento" class="tab-pane fade">
+					<!-- FATURAMENTO - FORMALIZAÇÃO DO RETORNO -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Faturamento - Formalização do Retorno</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="faturamentoAprovado">Aprovado*:</label>
+									<select name="faturamentoAprovado" id="faturamentoAprovado" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não (Encerrar Solicitação)</option>
+										<option value="anterior" class="form-control">Voltar para Atividade Anterior</option>
+										<option value="solicitante" class="form-control">Voltar para Solicitante</option>
+									</select>
+								</div>
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="numNFrecusa">N&deg; NF de Recusa (se for o caso):</label>
+									<input type="text" class="form-control" name="numNFrecusa" id="numNFrecusa">
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="numTicketPesagem">N&deg; Ticket de Pesagem:</label>
+									<input type="text" name="numTicketPesagem" id="numTicketPesagem" class="form-control">
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label for="obsFaturamento">Observação:</label>
+									<textarea class="form-control" name="obsFaturamento" id="obsFaturamento" rows="5"
+										style="resize: none;"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TAB FINANCEIRO -->
+				<div id="div_financeiro" class="tab-pane fade">
+					<!-- FINANCEIRO - BAIXA DE CONTAS A RECEBER -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Financeiro - Baixa de Contas a Receber</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="financeiroAprovado">Aprovado*:</label>
+									<select name="financeiroAprovado" id="financeiroAprovado" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não (Encerrar Solicitação)</option>
+										<option value="anterior" class="form-control">Voltar para Atividade Anterior</option>
+										<option value="solicitante" class="form-control">Voltar para Solicitante</option>
+									</select>
+								</div>
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="cobrancaBaixada">Cobrança Baixada?</label>
+									<select name="cobrancaBaixada" id="cobrancaBaixada" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label for="obsFinanceiro">Observação:</label>
+									<textarea class="form-control" name="obsFinanceiro" id="obsFinanceiro" rows="5"
+										style="resize: none;"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- TAB CUSTOS2 -->
+				<div id="div_custos" class="tab-pane fade">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Custos</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-6">
+									<label for="custosAprovado">Aprovado*:</label>
+									<select name="custosAprovado" id="custosAprovado" class="form-control">
+										<option value="" class="form-control">Selecione</option>
+										<option value="S" class="form-control">Sim</option>
+										<option value="N" class="form-control">Não (Encerrar Solicitação)</option>
+										<option value="anterior" class="form-control">Voltar para Atividade Anterior</option>
+										<option value="faturamento" class="form-control">Voltar para Faturamento</option>
+										<option value="solicitante" class="form-control">Voltar para Solicitante</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<label for="obsCustos">Observação:</label>
+									<textarea class="form-control" name="obsCustos" id="obsCustos" rows="5"
+										style="resize: none;"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script>
+		var mySimpleCalendar = (FLUIGC.calendar('#dataSolicitante'), FLUIGC.calendar('#dataEmissao'));
+	</script>
+</body>
+
+</html>

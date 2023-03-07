@@ -1,0 +1,30 @@
+$(document).ready(function () {
+
+   document.querySelector('#addUser').addEventListener('click', () => addChild('tblAprovador'));
+});
+
+const setSelectedZoomItem = selectedItems => {
+
+   if (selectedItems.inputId.indexOf("aprovador___") == 0) {
+      const line = selectedItems.inputId.split('___')[1];
+      document.querySelector(`#codAprovador___${line}`).value = selectedItems.ID;
+
+      let exist = $("[name^='codAprovador'][value=" + selectedItem.ID + "]").not("#codAprovador" + e).toArray();
+
+      if (exist.length == 1) {
+         FLUIGC.toast({
+            title: 'Atenção',
+            message: 'Aprovador já selecionado',
+            type: 'warning'
+         });
+         $(`#aprovador___${line}`).val('');
+         $(`#codAprovador___${line}`).val('');
+      }
+
+   }
+}
+
+const addChild = table => {
+   document.querySelector(`#${table}`).classList.remove("hide")
+   wdkAddChild(table);
+}

@@ -64,7 +64,7 @@ function createDataset(fields, constraints, sortFields) {
     var cnpj = findConstraint("cnpj", constraints);
     var produto = findConstraint("produto", constraints);
 
-    var tipo = ["OLD_VENDAS", "NEW_VENDAS", "ALTERACAO"]
+    var tipo = ["VENDAS", "VENDAS NOVO", "ALTERACAO"]
 
     var arrConstr = []
     if (numeroSolicitacao) {

@@ -1,0 +1,44 @@
+function validateForm(form) {
+
+   var msg = "";
+   var WKNumState = getValue("WKNumState");
+   var WKUser = getValue("WKUser");
+   var WKCompletTask = getValue("WKCompletTask")
+
+
+   if (WKNumState == 6) {
+
+      var table = form.getChildrenIndexes("tableAprovacoes");
+
+      for (var i = 0; i < table.length; i++) {
+
+         var line = table[i];
+
+         var valorAprovacao = form.getValue("valorAprovacao___" + line);
+         var user = form.getValue("userCod___" + line);
+
+         if (WKUser == user) {
+
+            if (valorAprovacao == "") {
+
+               msg += "A <b>Aprovação</b> é obrigatório.\n";
+
+            }
+         }
+
+      }
+
+   }
+   if (WKCompletTask == "true") {
+
+      if (msg != "") throw "\n" + msg;
+
+   }
+}
+
+function isEmpty(field) {
+   if (field == null || field == undefined || field == "") {
+      return true;
+   }
+   return false;
+}

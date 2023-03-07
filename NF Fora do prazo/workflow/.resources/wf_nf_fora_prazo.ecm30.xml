@@ -1,0 +1,864 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>wf_nf_fora_prazo</processId>
+    </processDefinitionPK>
+    <processDescription>NF Fora do Prazo</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>Grupo BAUMINAS.Contabilidade</categoryId>
+    <managerEngineAllocationId></managerEngineAllocationId>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>1</complementsLevel>
+    <notifyRequisitionerComplements>true</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+    <notifyAuthorityComplements>true</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>NF Fora do Prazo</processId>
+      <version>34</version>
+    </processDefinitionVersionPK>
+    <versionDescription></versionDescription>
+    <formId>73835</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>2</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>true</inheritFormSecurity>
+    <mobileReady>false</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Início</stateName>
+      <stateDescription>Início</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>100</positionX>
+      <positionY>84</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </processStatePK>
+      <stateName>Analisar / Validar</stateName>
+      <stateDescription>Analisar / Validar</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;NFForaPrazoContabilidade&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>160</positionX>
+      <positionY>211</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>37</sequence>
+      </processStatePK>
+      <stateName>Envio de e-mail</stateName>
+      <stateDescription>Envio de e-mail</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>560</positionX>
+      <positionY>74</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>2</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>43</sequence>
+      </processStatePK>
+      <stateName>Timer</stateName>
+      <stateDescription>Timer</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>true</automatic>
+      <positionX>410</positionX>
+      <positionY>84</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>32</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>0</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>30</sequence>
+      </processStatePK>
+      <stateName>Valida</stateName>
+      <stateDescription>Valida</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>320</positionX>
+      <positionY>201</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>21</sequence>
+      </processStatePK>
+      <stateName>Fim</stateName>
+      <stateDescription>Fim</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>595</positionX>
+      <positionY>228</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>28</sequence>
+      </processStatePK>
+      <stateName>Recusado</stateName>
+      <stateDescription>Recusado</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>450</positionX>
+      <positionY>228</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>65</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>34</version>
+        <sequence>30</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;cpDecisaoAprovador&quot;) == &quot;APROVADO&quot;</condition>
+      <destinationSequenceId>43</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>34</version>
+        <sequence>30</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>28</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <linkSequence>6</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <linkSequence>31</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>5</initialStateSequence>
+      <finalStateSequence>30</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <linkSequence>32</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>30</initialStateSequence>
+      <finalStateSequence>28</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <linkSequence>39</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>37</initialStateSequence>
+      <finalStateSequence>21</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <linkSequence>41</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>30</initialStateSequence>
+      <finalStateSequence>43</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <linkSequence>42</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>43</initialStateSequence>
+      <finalStateSequence>37</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask37</eventId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask37(attempt, message) {
+	try {
+		var tipoTexto = &apos;&apos;;
+		var server = &quot;https://bauminashom.fluig.com:9100/&quot;;
+    	var empresa = getValue(&quot;WKCompany&quot;);
+    	
+    	var msg  = &quot;&lt;div style=&apos;text-align: justify; font-weight: bold;&apos;&gt;&quot; +
+    					&quot;Foi solicitada a entrada de NF após a data de corte para a Unidade de que você faz parte. &lt;br&gt;&lt;br&gt;&quot; + 
+    					&quot;Lembrando que devemos considerar estas solicitações como exceções ou para matérias primas que chegaram na Unidade após a data de corte.&lt;br&gt;&lt;br&gt;&quot; + 
+    					&quot;Agradecemos o apoio.&lt;br&gt;&lt;br&gt;&quot; + 
+    				&quot;&lt;/div&gt;&quot;
+    				
+		//Monta mapa com parâmetros do template
+        var parametros = new java.util.HashMap();
+        parametros.put(&quot;msg&quot;, msg);
+        
+        //pegar imagem do servidor do fluig
+    	parametros.put(&quot;SERVER_URL&quot;, server);
+        //numero da empresa
+        parametros.put(&quot;TENANT_ID&quot;, empresa);
+
+        //Este parâmetro é obrigatório e representa o assunto do e-mail
+        parametros.put(&quot;subject&quot;, &quot;Processo NF Após Data de Corte - Atualização&quot;);
+        
+        //Monta lista de destinatários
+        var destinatarios = new java.util.ArrayList();
+
+		var indexes = hAPI.getChildrenIndexes(&quot;tblGestor&quot;);
+		for(var i = 0; i &lt; indexes.length; i++){
+			var dest = hAPI.getCardValue(&quot;usuarioGestor___&quot; + indexes[i]);	
+			destinatarios.add(dest);
+		}
+        notifier.notify(&quot;admin_fluig&quot;, &quot;tpl_mail_custom&quot;, parametros, destinatarios, &quot;text/html&quot;);
+	}
+	catch (ex) {
+		log.error(&quot;&gt;&gt;&gt; Erro enviar e-mail parecer final: &quot; + ex);
+	    throw ex;
+	}
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessCreate</eventId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessCreate(processId){&#xd;
+	hAPI.setCardValue(&quot;solicitacao&quot;, processId);&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeTaskSave</eventId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+	var anexos   = hAPI.listAttachments();&#xd;
+    var temAnexo = false;&#xd;
+&#xd;
+    if (anexos.size() &gt; 0) {&#xd;
+        temAnexo = true;&#xd;
+    }&#xd;
+&#xd;
+    if (!temAnexo) {&#xd;
+        throw &quot;É preciso anexar a NF/CTE&quot;;&#xd;
+    }&#xd;
+    &#xd;
+    &#xd;
+    /*&#xd;
+    var indexes = hAPI.getChildrenIndexes(&quot;tblGestor&quot;);&#xd;
+    var temGestor = false;&#xd;
+    &#xd;
+    if(indexes.length &gt; 0){&#xd;
+        temGestor = true;&#xd;
+    }&#xd;
+    &#xd;
+    if(!temGestor){&#xd;
+    	throw &quot;É preciso incluir pelo menos um gestor!&quot;&#xd;
+    }&#xd;
+    */&#xd;
+    &#xd;
+    &#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>onNotify</eventId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function onNotify(subject, receivers, template, params) {&#xd;
+&#xd;
+	log.info(&quot;### -- Número atividade: &quot; + getValue(&quot;WKNumState&quot;));&#xd;
+	&#xd;
+	if(!(getValue(&quot;WKNumState&quot;) == &quot;5&quot;)){&#xd;
+&#xd;
+		log.info(&quot;### -- ENTROU NO IF&quot;);&#xd;
+		&#xd;
+		receivers.add(&quot;paulo.souza@2beconsulting.com.br&quot;);&#xd;
+	&#xd;
+		log.info(&quot;### -- Notify: Template&quot;)&#xd;
+		log.info(&quot;### -- Template: &quot; + template)&#xd;
+		log.info(&quot;### -- Assunto: &quot; + subject)&#xd;
+		log.info(&quot;### -- receivers: &quot; + receivers)&#xd;
+		log.info(&quot;### -- params : &quot; + params)&#xd;
+	&#xd;
+		notifier.notify(getValue(&quot;WKUser&quot;), template, params, receivers, &quot;text/html&quot;);&#xd;
+		&#xd;
+	}else{&#xd;
+		log.info(&quot;### -- ENTROU NO ELSE&quot;);&#xd;
+	}&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function getReceivers(estabelecimento) {&#xd;
+&#xd;
+	var gestores = getDataset(&apos;AMB_COM_gestores_unidades&apos;,&#xd;
+		null,&#xd;
+		[&#xd;
+			{ field: &apos;codUnidade&apos;, value: estabelecimento },&#xd;
+		],&#xd;
+		false);&#xd;
+	var destinatarios = [];&#xd;
+&#xd;
+	gestores.filter(function (elem) {&#xd;
+		destinatarios.push(elem.emailGestor)&#xd;
+	})&#xd;
+&#xd;
+	destinatarios = destinatarios.join(&apos;;&apos;)&#xd;
+	destinatarios = destinatarios.split(&apos;;&apos;)&#xd;
+&#xd;
+	return destinatarios;&#xd;
+}&#xd;
+&#xd;
+function getDataset(name, campos, filtros, internal) {&#xd;
+&#xd;
+	var constraints = [];&#xd;
+&#xd;
+	if (internal) {&#xd;
+		constraints.push(DatasetFactory.createConstraint(&apos;metadata#active&apos;, true, true, ConstraintType.MUST));&#xd;
+	}&#xd;
+&#xd;
+	if (filtros) {&#xd;
+		filtros.forEach(function (filtro) {&#xd;
+			constraints.push(DatasetFactory.createConstraint(filtro.field, filtro.value, filtro.value, filtro.type || ConstraintType.MUST));&#xd;
+		});&#xd;
+	}&#xd;
+&#xd;
+	var dataset = DatasetFactory.getDataset(name, null, constraints, null);&#xd;
+	var result = [];&#xd;
+&#xd;
+	if (dataset.rowsCount &gt; 0) {&#xd;
+		var _loop = function _loop() {&#xd;
+			var o = {};&#xd;
+&#xd;
+			if (!campos) {&#xd;
+				campos = dataset.getColumnsName();&#xd;
+			}&#xd;
+&#xd;
+			campos.forEach(function (campo) {&#xd;
+				o[campo] = dataset.getValue(i, campo);&#xd;
+			});&#xd;
+&#xd;
+			result.push(o);&#xd;
+		};&#xd;
+&#xd;
+		for (var i = 0; i &lt; dataset.rowsCount; i++) {&#xd;
+			_loop();&#xd;
+		}&#xd;
+	}&#xd;
+&#xd;
+	return result;&#xd;
+}&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>intermediateconditional40</eventId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>// function intermediateconditional40() {
+
+// 	/* var hoje = new Date();
+// 	var data = hoje.setDate(hoje.getDate() + 1);
+
+// 	log.info(&apos;KINNITCHI --&gt; data :&apos;);
+// 	log.dir(data);
+
+
+// 	var obj = hAPI.calculateDeadLineTime(hoje, 0, 480, &quot;Default&quot;)
+// 	var dataPrazo = obj[0];
+
+
+// 	log.info(&apos;KINNITCHI --&gt; dataPrazo :&apos; + dataPrazo);
+
+// 	isData = (hoje &gt;= dataPrazo);
+
+
+
+// 	return isData; */
+
+// 	var processID = getValue(&quot;WKNumProces&quot;);
+
+// 	var dataset = DatasetFactory.getDataset(
+// 		&quot;processHistory&quot;,
+// 		null,
+// 		[
+// 			DatasetFactory.createConstraint(&quot;processInstanceId&quot;, processID, processID, ConstraintType.MUST),
+// 			DatasetFactory.createConstraint(&quot;stateSequence&quot;, &quot;40&quot;, &quot;40&quot;, ConstraintType.MUST)
+// 		],
+// 		null);
+
+
+
+// 	var today = new Date();
+// 	var endDate =
+// 		log.info(&quot;KINNITCHI --&gt; today : &quot; + today);
+// 	var obj = hAPI.calculateDeadLineTime(today, 0, 480, &quot;Default&quot;);
+// 	log.info(&quot;KINNITCHI --&gt; OBJ : &quot; + obj);
+// 	log.dir(obj)
+// 	var deadLineDate = obj[0];
+// 	log.info(&quot;KINNITCHI --&gt; deadLineDate : &quot; + deadLineDate);
+
+
+
+// 	// return today &gt;= deadLineDate ? true : false;
+// 	return false;
+
+// }</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>adc9ac</color>
+      <height>145</height>
+      <width>731</width>
+      <positionX>20</positionX>
+      <positionY>172</positionY>
+      <stateName>Fiscal/Contabilidade</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>82b0b7</color>
+      <height>145</height>
+      <width>731</width>
+      <positionX>20</positionX>
+      <positionY>28</positionY>
+      <stateName>Solicitante</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>190</positionX>
+      <positionY>74</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <componGrafSequence>24</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Inclusão da NF</stateName>
+    </ProcessComponGraf>
+  </list>
+  <list>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>1</version>
+        <linkSequence>25</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>24</initialStateSequence>
+      <finalStateSequence>4</finalStateSequence>
+    </ProcessLinkAssoc>
+  </list>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>34</version>
+        <linkSequence>6</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>116</positionX>
+      <positionY>244</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>34</version>
+        <linkSequence>41</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>350</positionX>
+      <positionY>101</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list>
+    <ProcessStateTrigger>
+      <processStateTriggerPK>
+        <companyId>1</companyId>
+        <processId>wf_nf_fora_prazo</processId>
+        <version>34</version>
+        <stateSequence>43</stateSequence>
+        <triggerSequence>0</triggerSequence>
+      </processStateTriggerPK>
+      <runType>2</runType>
+      <type>2</type>
+      <timeTrigger>9:0:0</timeTrigger>
+      <frequencia>02</frequencia>
+    </ProcessStateTrigger>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>wf_nf_fora_prazo</processId>
+      <version>1</version>
+      <sequence>37</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
+      <serviceName></serviceName>
+      <frequency>1</frequency>
+      <frequencyType>0</frequencyType>
+    </ProcessStateService>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+</list>

@@ -11,7 +11,6 @@
     <volumeId>Default</volumeId>
     <categoryId>Gestão de Mudanças</categoryId>
     <managerEngineAllocationId>MOC_informa_parecer</managerEngineAllocationId>
-    <managerEngineAllocationConfiguration></managerEngineAllocationConfiguration>
     <snapshotFrequency>0</snapshotFrequency>
     <baseDay>0</baseDay>
     <baseMonth>0</baseMonth>
@@ -29,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Solicitação de novos projetos e adequações</processId>
-      <version>10</version>
+      <version>37</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>74192</formId>
+    <formId>74434</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -60,7 +59,7 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
+      <engineAllocationId>MOC_mec_inicial</engineAllocationId>
       <engineAllocationConfiguration></engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>true</initialState>
@@ -112,7 +111,6 @@
       <joint>true</joint>
       <agreementPercentage>100</agreementPercentage>
       <engineAllocationId>MOC_informa_parecer</engineAllocationId>
-      <engineAllocationConfiguration></engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -164,7 +162,6 @@
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
       <engineAllocationId>MOC_interessados</engineAllocationId>
-      <engineAllocationConfiguration></engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -330,11 +327,25 @@
         <companyId>1</companyId>
         <processId>MOC</processId>
         <expressionOrder>1</expressionOrder>
-        <version>10</version>
+        <version>37</version>
+        <sequence>18</sequence>
+      </conditionProcessStatePK>
+      <condition>tools.validaParecer()</condition>
+      <destinationSequenceId>17</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>MOC</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>37</version>
         <sequence>18</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
-      <destinationSequenceId>17</destinationSequenceId>
+      <destinationSequenceId>1</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;1&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
   </list>
@@ -498,28 +509,87 @@
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>
-        <eventId>servicetask24</eventId>
+        <eventId>afterStateEntry</eventId>
         <processId>MOC</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function servicetask24(attempt, message) {
+      <eventDescription>function afterStateEntry(sequenceId) {&#xd;
+   log.info(&apos;KINNITCHI --&gt; AFTER STATE ENTRY MOC: &apos; + sequenceId);&#xd;
+&#xd;
+   if (sequenceId == 6) {&#xd;
+&#xd;
+      var seqParecer = hAPI.getCardValue(&apos;seqParecer&apos;);&#xd;
+&#xd;
+      if (seqParecer == &quot;&quot;) {&#xd;
+&#xd;
+         seqParecer = 1;&#xd;
+         hAPI.setCardValue(&apos;seqParecer&apos;, seqParecer);&#xd;
+&#xd;
+      } else {&#xd;
+&#xd;
+         seqParecer = parseInt(seqParecer) + 1;&#xd;
+         hAPI.setCardValue(&apos;seqParecer&apos;, seqParecer);&#xd;
+&#xd;
+&#xd;
+      }&#xd;
+&#xd;
+      var table = hAPI.getChildrenIndexes(&apos;tableConsultados&apos;);&#xd;
+&#xd;
+      for (var i = 0; i &lt; table.length; i++) {&#xd;
+&#xd;
+         var childrens = new java.util.HashMap();&#xd;
+         var index = table[i];&#xd;
+         var user = hAPI.getCardValue(&apos;consultado_usuario___&apos; + index);&#xd;
+         var matricula = hAPI.getCardValue(&apos;consultado_codusuario___&apos; + index);&#xd;
+&#xd;
+         childrens.put(&apos;usuario&apos;, user.toString());&#xd;
+         childrens.put(&apos;userCod&apos;, matricula.toString());&#xd;
+         childrens.put(&apos;controleParecere&apos;, seqParecer.toString());&#xd;
+&#xd;
+         hAPI.addCardChild(&quot;tableAprovacoes&quot;, childrens);&#xd;
+      }&#xd;
+&#xd;
+   }&#xd;
 }</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>
-        <eventId>beforeTaskSave</eventId>
+        <eventId>tools</eventId>
         <processId>MOC</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
-	&#xd;
-	if(getValue(&quot;WKNumState&quot;) == 6){&#xd;
-		var comment = getValue(&quot;WKUserComment&quot;);&#xd;
-		&#xd;
-		if(comment == &quot;&quot;){&#xd;
-			throw &quot;É necessário inserir um comentário antes de prosseguir!&quot;&#xd;
+      <eventDescription>log.info(&apos;KINNITCHI --&gt; INICIO Do tools:&apos;);&#xd;
+&#xd;
+var tools = {&#xd;
+&#xd;
+	validaParecer: function () {&#xd;
+&#xd;
+		log.info(&apos;KINNITCHI --&gt; INICIO DA FUNCAO tools.validaParecer :&apos;);&#xd;
+&#xd;
+		var table = hAPI.getChildrenIndexes(&quot;tableAprovacoes&quot;);&#xd;
+		var seqParecer = hAPI.getCardValue(&quot;seqParecer&quot;)&#xd;
+&#xd;
+		for (var i = 0; i &lt; table.length; i++) {&#xd;
+&#xd;
+			var line = table[i];&#xd;
+			var controleParecer = hAPI.getCardValue(&quot;controleParecere___&quot; + line);&#xd;
+			var aprovou = hAPI.getCardValue(&quot;valorAprovacao___&quot; + line);&#xd;
+&#xd;
+			log.info(&apos;KINNITCHI --&gt; SEQPARECER  :&apos; + seqParecer + &apos; CONTROLEPARECER === &apos; + controleParecer + &apos; APROVOU :&apos; + aprovou);&#xd;
+&#xd;
+			if (seqParecer == controleParecer &amp;&amp; aprovou != &quot;Sim&quot;) {&#xd;
+&#xd;
+				log.info(&apos;KINNITCHI --&gt; SEQPARECER  :&apos; + aprovou);&#xd;
+&#xd;
+&#xd;
+				return false;&#xd;
+			}&#xd;
 		}&#xd;
+&#xd;
+		log.info(&apos;KINNITCHI --&gt; RETURN TRUE :&apos;);&#xd;
+		return true;&#xd;
+&#xd;
 	}&#xd;
 }</eventDescription>
     </WorkflowProcessEvent>
@@ -527,12 +597,12 @@
   <list/>
   <list>
     <SwimLane>
-      <color>d0daae</color>
+      <color>d6e0d0</color>
       <height>281</height>
-      <width>155</width>
-      <positionX>340</positionX>
+      <width>267</width>
+      <positionX>494</positionX>
       <positionY>10</positionY>
-      <stateName>[C] Consultados</stateName>
+      <stateName>[I] Informados</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
       <swimLanePK>
@@ -546,7 +616,7 @@
       <color>82b0b7</color>
       <height>281</height>
       <width>151</width>
-      <positionX>187</positionX>
+      <positionX>200</positionX>
       <positionY>10</positionY>
       <stateName>[R] Responsáveis</stateName>
       <type>2</type>
@@ -559,12 +629,12 @@
       </swimLanePK>
     </SwimLane>
     <SwimLane>
-      <color>d6e0d0</color>
+      <color>d0daae</color>
       <height>281</height>
-      <width>267</width>
-      <positionX>494</positionX>
+      <width>155</width>
+      <positionX>340</positionX>
       <positionY>10</positionY>
-      <stateName>[I] Informados</stateName>
+      <stateName>[C] Consultados</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
       <swimLanePK>
@@ -582,7 +652,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>MOC</processId>
-        <version>10</version>
+        <version>37</version>
         <linkSequence>21</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -593,7 +663,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>MOC</processId>
-        <version>10</version>
+        <version>37</version>
         <linkSequence>21</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -604,7 +674,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>MOC</processId>
-        <version>10</version>
+        <version>37</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

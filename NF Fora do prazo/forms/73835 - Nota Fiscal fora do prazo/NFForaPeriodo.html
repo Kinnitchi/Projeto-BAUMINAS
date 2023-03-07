@@ -1,0 +1,247 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet"
+		href="http://162.215.217.225:8080/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<script type="text/javascript" src="jquery.maskMoney.min.js"></script>
+	<script type="text/javascript" src="custom.js"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class="panel panel-default" style="background: rgb(248, 248, 248);">
+				<div class="row">
+					<div class=" form-group">
+						<div class="col-md-4 col-sm-3">
+							<br />
+							<img src="logo.png" id="logo" class="img-responsive col-md-offset-1" style="width: 100px" />
+							<br />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-5 col-sm-5 text-center">
+							<h2 class="title" id="titulo"
+								style="font-weight: bold; font-size: 27px; color: rgb(6, 126, 153); font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">
+								NF/CTE Fora do Período</h2>
+						</div>
+					</div>
+					<div class=" form-group">
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="solicitacao" id="solicitacao" />
+			<input type="hidden" name="atividade" id="atividade" />
+			<input type="hidden" name="qtdeNfs" id="qtdeNfs" />
+			<input type="text" name="cpAprovador" id="cpAprovador" class="hide" />
+
+			<div class="panel panel-info">
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-xs-2">
+							<label for="solicitante" class="control-label">Solicitante</label>
+							<input type="text" class="form-control" name="solicitante" id="solicitante" readonly />
+						</div>
+						<div class="form-group col-xs-2">
+							<label for="dataInclusao" class="control-label">Data Inclusão</label>
+							<input type="text" class="form-control" name="dataInclusao" id="dataInclusao" readonly />
+						</div>
+
+						<div class="col-xs-3 form-group">
+							<label for="zoom_unidade">Unidade</label>
+							<input type="hidden" name="codUnidade" id="codUnidade" class="form-control">
+							<input type="zoom" name="zoom_unidade" id="zoom_unidade" class="form-control" data-zoom="{
+							'displayKey':'unidade',
+							'datasetId':'ds_adiant_reemb_unidades',
+							'placeholder':'Escolha a unidade',
+							'fields':[
+								{
+									'field':'unidade',
+									'label':'Unidade'
+								},
+								{
+									'field':'id',
+									'label':'codigo',
+									'visible': 'false'
+								}
+							]
+						}">
+						</div>
+
+						<div class="col-xs-2 form-group">
+							<label for="cp_CC">Código</label>
+							<input type="text" class="form-control" name="cp_CC" id="cp_CC" readonly>
+						</div>
+						<div class="col-xs-3 form-group">
+							<label for="cp_CC_Desc">Centro de Custo</label>
+							<input type="zoom" name="cp_CC_Desc" id="cp_CC_Desc" class="form-control" data-zoom="{
+							'displayKey':'DISPLAY',
+							'datasetId':'ds_protheus_consulta_ctt',
+							'placeholder':'Escolha um Centro de Custo',
+							'fields':[
+								{
+									'field':'DISPLAY',
+									'label':'CÓDIGO | DESCRIÇÃO',
+									'standard':'true'
+								},{
+									'field':'CTT_DESC01',
+									'label':'Descrição',
+									'visible': 'false'
+								},{
+									'field':'CTT_CUSTO',
+									'label':'Código',
+									'visible': 'false'
+								}
+							]
+						}">
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-3 form-group">
+							<button type="button" class="btn btn-warning form-control" id="btnAddGestor" name="btnAddGestor"
+								onclick="addGestor();">
+								<i class="fluigicon fluigicon-plus-sign icon-sm" style="color:white; "></i><strong> &nbsp;
+									Adicionar Gestor</strong> </button>
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="form-group col-md-12">
+							<table class="table table-bordered" id="tblGestor" tablename="tblGestor" noaddbutton="true">
+								<thead>
+									<tr>
+										<th class="col-md-12">Gestor</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="col-md-12">
+											<div class="form-group">
+												<input type="zoom" name="zoom_gestor" id="zoom_gestor" class="form-control"
+													data-zoom="{
+												'displayKey':'colleagueName',
+												'datasetId':'colleague',
+												'placeholder':'Escolha um usuário gestor',
+												'filterValues':'active,true',
+												'fields':[
+													{
+														'field':'colleagueName',
+														'label':'Usuário',
+														'standard':'true'
+													},{
+														'field':'colleaguePK.colleagueId',
+														'label':'Matrícula',
+														'visible': 'false'
+													}
+												]
+											}">
+												<input type="hidden" name="usuarioGestor" id="usuarioGestor">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-3 form-group">
+							<button type="button" class="btn btn-warning form-control" style="margin-top:22px;" id="btnAddNF"
+								name="btnAddNF" onclick="addNF(this);">
+								<i class="fluigicon fluigicon-plus-sign icon-sm" style="color:white; "></i><strong> &nbsp;
+									Adicionar NF/CTE</strong> </button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<table class="table table-bordered" id="tblNF" tablename="tblNF" noaddbutton="true">
+								<thead>
+									<tr>
+										<th class="col-md-3 col-sm-3">Número NF/CTE</th>
+										<th class="col-md-2 col-sm-2">Data Emissão da NF/CTE</th>
+										<th class="col-md-2 col-sm-2">Data Recebimento</th>
+										<th class="col-md-3 col-sm-3">Natureza</th>
+										<th class="col-md-2 col-sm-2">Valor</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="col-md-3 col-sm-3">
+											<div class="form-group">
+												<input type="text" class="form-control" name="nfCTE" id="nfCTE" />
+											</div>
+										</td>
+										<td class="col-md-2 col-sm-2">
+											<div class="form-group">
+												<div class="input-group date" id="dvDataEmissao">
+													<input type="text" id="dataEmissao" name="dataEmissao" class="form-control"
+														placeholder="dd/mm/yyyy" readonly />
+													<span class="input-group-addon">
+														<span class="fluigicon fluigicon-calendar"></span>
+													</span>
+												</div>
+											</div>
+										</td>
+										<td class="col-md-2 col-sm-2">
+											<div class="form-group">
+												<div class="input-group date" id="dvDataRecebimento">
+													<input type="text" id="dataRecebimento" name="dataRecebimento"
+														class="form-control" placeholder="dd/mm/yyyy" readonly />
+													<span class="input-group-addon">
+														<span class="fluigicon fluigicon-calendar"></span>
+													</span>
+												</div>
+											</div>
+										</td>
+										<td class="col-md-3 col-sm-3">
+											<div class="form-group">
+												<select id="natureza" name="natureza" class="form-control">
+													<option value="materiaPrima">Matéria Prima</option>
+													<option value="servico">Serviço</option>
+													<option value="frete">Frete</option>
+													<option value="imobilizado">Imobilizado</option>
+													<option value="outros">Outros</option>
+												</select>
+											</div>
+										</td>
+										<td class="col-md-2 col-sm-2">
+											<div class="form-group">
+												<input type="text" class="form-control maskMoney" name="valor" id="valor" />
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-xs-3">
+							<label for="swAprovado">Aprovado?</label><br />
+							<input class="switchs" id="swAprovado" name="swAprovado" type="checkbox" data-on-color="success"
+								data-off-color="danger" data-on-text="Sim" data-off-text="Não" data-animate="true"
+								checked="true" data-size="large" />
+
+							<input type="hidden" name="cpDecisaoAprovador" id="cpDecisaoAprovador">
+						</div>
+						<div id="dvJustificativa" style="display:none;">
+							<div class="form-group col-xs-12">
+								<label for="justificativa" class="control-label">Justificativa</label>
+								<textarea name="justificativa" id="justificativa" rows="3" class="form-control"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

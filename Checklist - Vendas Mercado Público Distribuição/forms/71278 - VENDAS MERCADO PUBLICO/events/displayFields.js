@@ -7,15 +7,12 @@ function displayFields(form, customHTML) {
 	form.setValue("atividade", atividade);
 
 
-	customHTML.append("<script>");
-	customHTML.append("var FORM_MODE = '" + form.getFormMode() + "'");
-	customHTML.append("</script>");
+	customHTML.append("<script> var FORM_MODE =" + form.getFormMode() + "</script>");
 
 
 
 	if (atividade <= 1) {
 		form.setValue("dataSolicitacao", new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date()));
-		customHTML.append("<script>window.parent.$('ul li a[data-save]').hide();</script>");
 	}
 
 
