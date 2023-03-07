@@ -37,6 +37,12 @@ $(document).ready(function () {
     calculateDays("#daysGozo", "#dt_dataInicialGozo", "#dt_dataFinalGozo");
     calculateDays("#daysAbono", "#txt_periodoAbonoDe", "#txt_periodoAbonoAte");
 
+    changeDays("#daysAbono", "#txt_periodoAbonoDe", "#txt_periodoAbonoAte");
+    changeDays("#daysGozo", "#txt_periodoAbonoDe", "#txt_periodoAbonoAte");
+
+
+    WKNumState == 1 ? validateDynamicFields('rad_abonoPecuniario') : validateDynamicFields('_rad_abonoPecuniario');
+
 });
 
 const radiosSelected = () => {
@@ -59,26 +65,42 @@ const radiosSelected = () => {
 
 }
 
+function addDays(date, days) {
+    var result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+}
+
 const calculateDays = (days, field, result) => {
 
     const daysCount = document.querySelector(days).value;
-    $(field).on('blur', () => {
-        const fieldDate = transformDate(document.querySelector(field).value);
-        const returnData = new Date(fieldDate);
-        const day = returnData.getDate() + parseInt(daysCount);
-        const month = returnData.getMonth() + 1;
-        const year = returnData.getFullYear();
+    if (daysCount != null || daysCount != undefined || daysCount != "" || daysCount != "0") {
+        $(field).on('blur', () => {
+            // DATE INICIAL
+            const fieldDate = transformDate(document.querySelector(field).value);
+            let finalDate = addDays(fieldDate, daysCount);
 
-        return document.querySelector(result).value = `${day}/${month}/${year}`;
-    });
+            return document.querySelector(result).value = finalDate.toLocaleDateString();
+
+        });
+
+    } else {
+
+        FLUIGC.toast({
+            title: 'Atenção',
+            message: 'Preencha o campo de dias',
+            type: 'warning'
+        });
+
+    }
 
 }
 
 const transformDate = date => {
 
     const data = date.split('/').reverse().join('-');
-    let day = data.split('-')[2].startsWith('0') ? day = data.split('-')[2].replace('0', '') : day = data.split('-')[2];
-    let month = !data.split('-')[1].length == 2 ? month = '0' + data.split('-')[1] : month = data.split('-')[1];
+    let day = data.split('-')[2].startsWith('0') ? data.split('-')[2].replace('0', '') : data.split('-')[2];
+    let month = data.split('-')[1].startsWith('0') ? data.split('-')[1].replace('0', '') : data.split('-')[1];
     let year = data.split('-')[0];
 
     return `${year}-${month}-${day}`;
@@ -86,8 +108,46 @@ const transformDate = date => {
 
 
 function datasHoras() {
-    FLUIGC.calendar('#dt_dataInicialGozo, #txt_periodoAbonoDe, #txt_periodoAbonoAte, #txt_substFeriasApartir, #txt_periodoGozoDe, #txt_periodoGozoAte', {
+    FLUIGC.calendar('#dt_dataInicialGozo, #txt_periodoAbonoDe, #txt_substFeriasApartir', {
         pickDate: true,
         pickTime: false
     });
+}
+
+const validateDynamicFields = field => {
+    const fields = document.querySelectorAll('[name^="' + field + '"]');
+    const fieldsArray = Array.from(fields);
+
+    fieldsArray.forEach(field => {
+        if (field.checked) {
+            if (field.value === "Sim") {
+                document.querySelectorAll(".divAbono")[0].classList.remove("hide")
+                document.querySelectorAll(".divAbono")[1].classList.remove("hide")
+            }
+        }
+    });
+}
+
+const changeDays = (days, field, result) => {
+
+    $('#' + days).on('chaneg', e => {
+
+        if (e.value == null || e.value == undefined || e.value == "" || e.value == "0") {
+
+            const fieldDate = transformDate(document.querySelector(field).value);
+            let finalDate = addDays(fieldDate, e.value);
+
+            return document.querySelector(result).value = finalDate.toLocaleDateString();
+
+        } else {
+
+            FLUIGC.toast({
+                title: 'Atenção',
+                message: 'Preencha o campo de dias corretamente',
+                type: 'warning'
+            });
+
+        }
+
+    })
 }

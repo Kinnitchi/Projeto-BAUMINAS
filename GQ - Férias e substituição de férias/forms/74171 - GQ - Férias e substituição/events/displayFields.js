@@ -2,6 +2,7 @@ function displayFields(form, customHTML) {
 	var atividadeAtual = getValue("WKNumState");
 
 	form.setValue("atividade", atividadeAtual);
+	customHTML.append("<script>var WKNumState = " + atividadeAtual + "</script>");
 
 	if (form.getFormMode() == "VIEW" || form.getFormMode() == "MOD") {
 		form.setShowDisabledFields(true);

@@ -20,16 +20,21 @@
  		if (docId != "") {
  			var idx = wdkAddChild("tableInformados");
  			setTimeout(() => {
- 				reloadZoomFilterValues("informado_usuario___" + idx, "tipoEnvolvimento,C,documentId," + docId);
+ 				reloadZoomFilterValues("informado_usuario___" + idx, "tipoEnvolvimento,I,documentId," + docId);
  			}, 300);
 
  		} else {
  			FLUIGC.toast({
  				title: 'ERRO: ',
- 				message: 'É necessário selecionar um evento antes de incluir um consultado',
+ 				message: 'É necessário selecionar um evento antes de incluir um informado',
  				type: 'DANGER'
  			});
  		}
+ 	},
+ 	reloadEvent: async function () {
+ 		setTimeout(() => {
+ 			reloadZoomFilterValues(wksuer, "tipoEnvolvimento,R,documentId," + docId);
+ 		}, 300);
  	},
 
  	pareceresResponsavel: async function () {
@@ -102,12 +107,8 @@
 
  			});
 
-
- 			// var idx = document.querySelectorAll("[name^='userCod___'][value='" + wkUser + "']")[0].id.replace("userCod___", "");
- 			/* 	idx ? document.querySelectorAll("[name^='_userCod___'][value='" + wkUser + "']") && document.querySelectorAll("[name^='_controleParecere___'][value='" + parecer + "']").id.replace("_userCod___", "") : null; */
  			$("#aprovacao").val(document.querySelector("#valorAprovacao___" + idx + ", #_valorAprovacao___" + idx).value);
  			$("#comment").val(document.querySelector("#comentarios___" + idx + ", #_comentarios___" + idx).value);
-
  			$("[data-open-modal]").on("click", function () {
 
  				let controleParecer = document.querySelector("#controleParecere___" + idx).value;
